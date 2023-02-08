@@ -29,6 +29,28 @@
         }
     }
 
+    .carousel{
+        position: relative;
+        &::before{
+            content: '';
+            background-color: colors.$yellow_color;
+            position: absolute;
+            top: 0;
+            right: 2px;
+            width: 10px;
+            height: 100%;
+        }
+        &::after{
+            content: '';
+            background-color: colors.$blue_color;
+            position: absolute;
+            top: 0;
+            left: 2px;
+            width: 10px;
+            height: 100%;
+        }
+    }
+
     .team_info{
         li{
             padding: 15px 0;
