@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'arabic-font', sans-serif;
+    background: radial-gradient(circle at 0 40%,rgba(56,109,179,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 100% 40%,rgba(104,51,226,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 50% 10%,rgba(49,252,255,.17),hsl(0deg 100% 50% / 0%) 25%);
+    direction: rtl;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+    // ===== Selecting Elements Color =====
+::selection {
+    background: #fece2f;
+    color: #fff;
+}
+    // ===== Scrollbar CSS =====
+  /* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5165fd #fff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5165fd;
+    border-radius: 7px;
+    border: 3px solid #fff;
+}
+@font-face {
+    font-family: 'arabic-font';
+    src: url('../../fonts/Montserrat-Arabic-Regular.ttf');
+}

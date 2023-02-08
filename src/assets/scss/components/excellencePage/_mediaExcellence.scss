@@ -1,0 +1,52 @@
+@media (max-width: 1199px) {
+    .excellence_main_info div  {
+        width: 20%;
+
+        ul{
+            padding-top: 10px;
+        }
+    }
+    .excellence .excellence_main_info .excellence_info h4 {
+        top: -18%;
+        font-size: 15px;
+    }
+}
+@media (max-width: 991px) {
+    .excellence .excellence_sec_tit h2::before{
+        left: 60%;
+    }
+    .excellence .excellence_sec_tit h2::after{
+        right: 60%;
+    }
+    .excellence_main_info div{
+        width: 30%;
+    }
+}
+@media (max-width: 767px) {
+    .excellence .excellence_sec_tit h2::before {
+        left: 65%;
+        width: 15%;
+    }
+    .excellence .excellence_sec_tit h2::after{
+        right: 65%;
+        width: 15%;
+    }
+    .excellence_main_info,
+    .logo {
+        display: none;
+    }
+    .hidden{
+        display: block !important;
+        
+        .excellence_info_hide{
+            background: linear-gradient(270deg, transparent 0%, rgba(254,206,47,1) 35%);
+            margin: 25px 0;
+            padding: 15px 15px 1px 0;
+            border-bottom-left-radius: 50px;
+
+            ul{
+                padding-right: 25px;
+            }
+        }
+    }
+}

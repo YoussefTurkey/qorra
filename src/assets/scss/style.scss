@@ -1,0 +1,23 @@
+// Importing Global Scss Files
+@use './global/colors';
+@use './global/rest';
+@use './global/variables';
+// Importing Components Scss Files
+    // Importing Header Scss Files
+@import './components/homePage/header';
+@import './components/homePage/mediaHeader';
+    // Importing Header Scss Files
+@import './components/homePage/welcome';
+@import './components/homePage/mediaWelcome';
+    // Importing About Scss Files
+@import './components/aboutPage/about';
+@import './components/aboutPage/mediaAbout';
+    // Importing Excellence Scss Files
+@import './components/excellencePage/excellence';
+@import './components/excellencePage/mediaExcellence';
+    // Importing Team Scss Files
+@import './components/teamPage/team';
+@import './components/teamPage/mediaTeam';
+    // Importing Brand Scss Files
+@import './components/brandPage/brand';
+@import './components/brandPage/mediaBrand';

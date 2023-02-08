@@ -1,0 +1,69 @@
+@media (max-width: 1199px) {
+    .welcome .welcome_txt h1 {
+        font-size: 50px;
+    }
+    .welcome .welcome_txt #first_desc {
+        font-size: 25px;
+    }
+    .welcome .welcome_txt #second_desc {
+        font-size: 20px;
+    }
+    .welcome .welcome_txt .more{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 991px) {
+    .welcome .welcome_txt #first_desc {
+        font-size: 20px;
+    }
+    .welcome .welcome_txt #second_desc {
+        font-size: 17px;
+    }
+    .welcome .welcome_txt .more{
+        padding: 10px 25px;
+    }
+    .welcome .scroll_down{
+        width: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .welcome .welcome_txt h1{
+        text-align: center;
+    }
+    .welcome .welcome_txt .more{
+        margin: 5% auto;
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
+    .navbar .navbar-brand{
+        width: 25%;
+    }
+    .welcome .scroll_down {
+        width: 15%;
+    }
+}
+@media (max-width: 600px) {
+    .navbar .navbar-brand{
+        width: 35%;
+    }
+}
+
+@-webkit-keyframes swap {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}
+@keyframes swap {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}
+@-webkit-keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
+}
