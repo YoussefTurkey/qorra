@@ -28,4 +28,12 @@ $(document).ready(function () {
 		$('html, body').animate({scrollTop: 0}, 300);
 		return false;
 	});
+
+    $('.dark_theme_icon').on('click', function(){
+        $('body').toggleClass('dark_mode')
+        $('.navbar').toggleClass('dark_nav')
+        $('.nav-link').toggleClass('dark_items')
+        $('.join').toggleClass('dark_join')
+        $('p, h1, h2, h3').toggleClass('dark_txt')
+    })
 });
