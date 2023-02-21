@@ -1,7 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Carousel from 'react-bootstrap/Carousel';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+// import required modules
+import { Scrollbar } from "swiper";
 import slid01 from '../assets/images/photos/slid-01.jpg'
 import slid02 from '../assets/images/photos/slid-02.jpg'
 import slid03 from '../assets/images/photos/slid-03.jpg'
@@ -24,97 +30,49 @@ const Team = () => {
                         <h2>نَحن <span>هنا</span></h2>
                     </Col>
 
-                    <Row>
-                      <Carousel fade>
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid01}
-                            alt="First slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid02}
-                            alt="Second slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid03}
-                            alt="Third slide"
-                          />
-                        </Carousel.Item>
-                        
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid04}
-                            alt="Fourth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid05}
-                            alt="Fifth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid06}
-                            alt="Sixth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid07}
-                            alt="Seventh slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid08}
-                            alt="Eigth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid09}
-                            alt="Ninth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid10}
-                            alt="Tenth slide"
-                          />
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={slid11}
-                            alt="Eleventh slide"
-                          />
-                        </Carousel.Item>
-                      </Carousel>
-                    </Row>
+                    <Col className='col-12 col-sm-12 col-md-12'>
+                        <Swiper
+                          scrollbar={{
+                            hide: true,
+                          }}
+                          modules={[Scrollbar]}
+                          className="mySwiper"
+                        >
+                          <SwiperSlide>
+                            <img src={slid01} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid02} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid03} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid04} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid05} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid06} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid07} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid08} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid09} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid10} alt="فريق قراء" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={slid11} alt="فريق قراء" />
+                          </SwiperSlide>
+                        </Swiper>
+                    </Col>
                 </Row>
             </Container>
         </section>

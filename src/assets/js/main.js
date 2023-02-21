@@ -34,6 +34,7 @@ $(document).ready(function () {
         $('.navbar').toggleClass('dark_nav')
         $('.nav-link').toggleClass('dark_items')
         $('.join').toggleClass('dark_join')
-        $('p, h1, h2, h3').toggleClass('dark_txt')
+        $('p, h1, h2, h3').toggleClass('dark_txt');
+        $('.card-text').toggleClass('dark_card_text');
     })
 });

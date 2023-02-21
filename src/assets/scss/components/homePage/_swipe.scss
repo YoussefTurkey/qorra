@@ -1,0 +1,25 @@
+.swipping{
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 95%;
+    margin-top: 150px;
+    position: relative;
+        &::before{
+            content: '';
+            background-color: colors.$yellow_color;
+            position: absolute;
+            top: 0;
+            right: 26px;
+            width: 10px;
+            height: 100%;
+        }
+        &::after{
+            content: '';
+            background-color: colors.$blue_color;
+            position: absolute;
+            top: 0;
+            left: 26px;
+            width: 10px;
+            height: 100%;
+        }
+}
