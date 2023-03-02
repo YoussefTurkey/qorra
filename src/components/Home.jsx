@@ -1,5 +1,5 @@
 import Header from './homePage/Header'
-import Welcome from './homePage/Welcome'
+import News from './homePage/News'
 import Swipe from './homePage/Swipe'
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <Header />
       <Swipe />
-      <Welcome />
+      <News />
     </>
   )
 }

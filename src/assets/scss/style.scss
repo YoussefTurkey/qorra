@@ -8,9 +8,9 @@
 @import './components/homePage/mediaHeader';
     // Importing Swipe Scss Files
 @import './components/homePage/swipe';
-    // Importing Welcome Scss Files
-@import './components/homePage/welcome';
-@import './components/homePage/mediaWelcome';
+    // Importing News Scss Files
+@import './components/homePage/news';
+@import './components/homePage/mediaNews';
     // Importing About Scss Files
 @import './components/aboutPage/about';
 @import './components/aboutPage/mediaAbout';
@@ -23,3 +23,8 @@
     // Importing Brand Scss Files
 @import './components/brandPage/brand';
 @import './components/brandPage/mediaBrand';
+    // Importing Registration Scss Files
+@import './components/registrationPage/login';
+@import './components/registrationPage/sign';
+    // Importing Not-Found Scss Files
+@import './components/notfoundPage/notFound';

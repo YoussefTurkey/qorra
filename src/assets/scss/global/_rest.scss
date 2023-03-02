@@ -53,6 +53,7 @@ img{
     src: url('../../fonts/Montserrat-Arabic-Regular.ttf');
 }
 
+// dark-theme
 .dark_mode{
     background-color: #333;
 }
@@ -81,7 +82,7 @@ img{
 .dark_card_text{
     color: #333 !important;
 }
-
+// dark-icon-theme
 .dark_theme_icon{
     position: fixed;
     bottom: 35px;
@@ -90,6 +91,18 @@ img{
     cursor: pointer;
     animation: 1.5s ease-in-out infinite float;
 }
+
+// Preloading
+#preload{
+    background: #fff url(../../images/Ripple-1s-200px.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000000;
+}
+
 @-webkit-keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(10px); }

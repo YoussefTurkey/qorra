@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -22,10 +22,13 @@ const Header = () => (
                     >
                         <Nav.Link href="#team">فريقنا</Nav.Link>
                         <Nav.Link href="#excellence">أهدافنا</Nav.Link>
-                        <Nav.Link href="#about" id='about_us'>من نحن</Nav.Link>
+                        <Nav.Link href="#last_news" id='news'>أخر الأخبار</Nav.Link>
                         <Nav.Link href="#" id='top_screen' className='active'>الرئيسية</Nav.Link>
                     </Nav>
-                    <Button variant="outline-primary join">تطوع معنا</Button>
+
+                    <a href='/join/login' className="btn btn-outline-primary join">
+                        شارك معنا
+                    </a>
                 </Navbar.Collapse>
 
             </Container>

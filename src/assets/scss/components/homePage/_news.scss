@@ -1,7 +1,7 @@
-.welcome{
+.news{
     margin: 100px auto;
 
-    .welcome_tit{
+    .news_tit{
         position: relative;
         &::after{
             content: '';
@@ -80,11 +80,11 @@
         }
     }
 
-    // .welcome_img{
+    // .news_img{
     //     animation: swap 1s infinite  alternate;
     // }
 
-    // .welcome_txt{
+    // .news_txt{
     //     text-align: right;
 
     //     h1{

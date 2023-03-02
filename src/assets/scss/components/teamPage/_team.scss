@@ -1,4 +1,16 @@
 .team{
+    overflow: hidden;
+    .about_txt{
+        h3{
+            font-weight: 500;
+            font-size: 35px;
+        }
+
+        p{
+            font-size: 20px;
+            line-height: 2.5;
+        }
+    }
 
     .team_tit{
         h2{
@@ -67,6 +79,16 @@
                 display: inline-block;
                 width: 40px;
             }
+        }
+    }
+
+    .swipe_slides{
+        position: relative;
+
+        .swiper{
+            cursor: pointer;
+            position: absolute;
+            width: 170%;
         }
     }
 }

@@ -1,39 +1,51 @@
 @media (max-width: 1199px) {
-    .welcome .welcome_txt h1 {
+    .news .news_txt h1 {
         font-size: 50px;
     }
-    .welcome .welcome_txt #first_desc {
+    .news .news_txt #first_desc {
         font-size: 25px;
     }
-    .welcome .welcome_txt #second_desc {
+    .news .news_txt #second_desc {
         font-size: 20px;
     }
-    .welcome .welcome_txt .more{
+    .news .news_txt .more{
         margin-top: 20px;
+    }
+    .news .card{
+        .card-title{
+            font-size: 20px;
+        }
+        .card-text{
+            font-size: 15px;
+            line-height: 2;
+        }
     }
 }
 @media (max-width: 991px) {
-    .welcome .welcome_txt #first_desc {
+    .news .news_txt #first_desc {
         font-size: 20px;
     }
-    .welcome .welcome_txt #second_desc {
+    .news .news_txt #second_desc {
         font-size: 17px;
     }
-    .welcome .welcome_txt .more{
+    .news .news_txt .more{
         padding: 10px 25px;
     }
-    .welcome .scroll_down{
+    .news .scroll_down{
         width: 10%;
+    }
+    .news .card{
+        margin-bottom: 15px;
     }
 }
 @media (max-width: 767px) {
-    .welcome{
+    .news{
         margin-top: 120px;
     }
-    .welcome .welcome_txt h1{
+    .news .news_txt h1{
         text-align: center;
     }
-    .welcome .welcome_txt .more{
+    .news .news_txt .more{
         margin: 5% auto;
         display: block;
         width: 50%;
@@ -42,13 +54,30 @@
     .navbar .navbar-brand{
         width: 25%;
     }
-    .welcome .scroll_down {
+    .news .scroll_down {
         width: 15%;
     }
 }
 @media (max-width: 600px) {
     .navbar .navbar-brand{
         width: 35%;
+    }
+}
+@media (max-width: 575px) {
+    .news .card{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+    .news .news_tit{
+        &::after{
+            width: 36%;
+            right: 7.5%;
+        } 
+        
+        h2{
+            text-align: center;
+        }
     }
 }
 

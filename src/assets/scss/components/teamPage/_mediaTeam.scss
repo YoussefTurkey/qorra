@@ -1,5 +1,25 @@
+@media (max-width: 1399px) {
+    .team .about_txt p {
+        font-size: 17px;
+    }
+}
+@media (max-width: 1199px) {
+    .team .about_txt p {
+        font-size: 14px;
+    }
+}
 @media (max-width: 991px) {
     .team .team_info li{
         font-size: 12px;
+    }
+    .about_txt{
+        width: 100%;
+    }
+    .team .swipe_slides{
+        width: 60%;
+
+        .swiper{
+            position: relative !important;
+        }
     }
 }

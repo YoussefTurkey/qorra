@@ -1,16 +1,14 @@
 import React from 'react'
 import Home from '../components/Home'
-import About from './About'
-import Excellence from './Excellence'
-import Team from './Team'
-import Brand from './Brand'
+import Excellence from '../components/Excellence'
+import Team from '../components/Team'
+import Brand from '../components/Brand'
 import dark from '../assets/images/dark.png'
 
 const Index = () => {
   return (
     <>
       <Home />
-      <About />
       <Excellence />
       <Team />
       <Brand />
