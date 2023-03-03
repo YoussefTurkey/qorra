@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import tegara from '../../assets/images/photos/tegara.jpg'
 import qaseda from '../../assets/images/photos/qaseda.jpg'
-import ramadan from '../../assets/images/photos/ramadan.jpg'
+import arabesk from '../../assets/images/photos/arabesk.jpg'
 
 const News = () => {
   return (
@@ -29,7 +29,7 @@ const News = () => {
                             والأستاذ الدكتور: وائل عبدالسلام، نائب رئيس الجامعة لشئون الطلاب.
                             والأستاذ الدكتور: السيد الصيفي، عميد كلية التجارة - جامعة الإسكندرية.
                             </Card.Text>
-                            <Button variant="primary" className='more'>للمزيد من المعلومات</Button>
+                            <a role='button' className='more'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -44,30 +44,24 @@ const News = () => {
                             إن الشِّعرَ لسانُ أمتنا العربية وتراثها الأصيل، وإن للغة الضاد مذاقًا خاصًا في الشعر، والشعر ليس لسان الشعراء والفقهاء فقط، بل العرب جميعًا.
                             ونَحنُ في قُرَّاء نؤمنُ أن لغتنا أشمل من أن تنطوي في فئةٍ بعينها، لذا قررنا عقد مسابقة "بيت القصيدة" للشعر الفصيح.
                             </Card.Text>
-                            <Button variant="primary" className='more'>للمزيد من المعلومات</Button>
+                            <a role='button' className='more'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>
 
                 <Col className='col-12 col-sm-6 col-lg-4'>
                     <Card>
-                        <Card.Img variant="top" src={ramadan} />
+                        <Card.Img variant="top" src={arabesk} />
                         <Card.Body>
-                            <Card.Title>رمضان بطعم قراء</Card.Title>
+                            <Card.Title>أرابيســــك</Card.Title>
                             <Card.Text>
-                            تأتي الشهور وتنقضي ولربما.. القلب لم يعبأ بها إطلاقًا
-                            لكن إذا قالوا أهل هلالكم.. شمس السعادة تعلن الإشراقَ
-                            فتحب أن تهنئكم قرَّاءُ بحلول شهر رمضان المبارك أعاده اللَّه علينا وعليكم بالخير واليمن والبركات.
-                            تُهنأكم مبادرة قراء بحلول شهر رمضان الكريم
-                            عسى اللَّه أن يتقبل منا صالح الأعمال.
-                            <q>
-                                <b>#اقرأ_لتعرف </b>
-                                <b>#واعرف_لتكتب </b>
-                                <b>#واكتب_لِتُعَلِّم </b>
-                                <b>#قُرَّاءْ</b>
-                                </q>
+                            نعلن بكل حب عن الشراكة مع أرابيسك Art Space، آملين التوفيق والنجاح والتقدم لكلا الكيانيين.
+                            <p>#اقرأ_لتعرف</p>
+                            <p>#واعرف_لتكتب</p>
+                            <p>#واكتب_لِتُعَلِّم</p>
+                            <p>#قُرَّاءْ</p>
                             </Card.Text>
-                            <Button variant="primary" className='more'>للمزيد من المعلومات</Button>
+                            <a role='button' href='/events' className='more'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>

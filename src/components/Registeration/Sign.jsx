@@ -42,11 +42,11 @@ const Sign = () => {
                                     <label id="gender_label">النوع</label>
                                     <div className="wizard-form-radio">
                                         <input name="radio-name" id="radio1" type="radio" />
-                                        <label htmlFor="radio1">رجل</label>
+                                        <label htmlFor="radio1">ذكر</label>
                                     </div>
                                     <div className="wizard-form-radio">
                                         <input name="radio-name" id="radio2" type="radio" />
-                                        <label htmlFor="radio2">امرأة</label>
+                                        <label htmlFor="radio2">أنثى</label>
                                     </div>
                                 </div>
                                 <div className="form-group clearfix">
