@@ -1,3 +1,4 @@
+import BackToHome from '../EventsPage/BackToHome'
 
 const Login = () => {
   return (
@@ -70,6 +71,8 @@ const Login = () => {
                 </div>
             </div>
         </section>
+
+        <BackToHome />
     </>
   )
 }

@@ -1,3 +1,5 @@
+import BackToHome from '../EventsPage/BackToHome'
+
 const Sign = () => {
   return (
     <>
@@ -157,6 +159,8 @@ const Sign = () => {
                 </div>
             </div>
         </section>
+
+        <BackToHome />
     </>
   )
 }
