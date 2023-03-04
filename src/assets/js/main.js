@@ -5,6 +5,12 @@ $(document).ready(function () {
     window.addEventListener('load', function(){
         $('#preload').hide();
     })
+	// preloading with mobile size screen
+	if ($(window).width() <= 768) { 
+		window.addEventListener('load', function(){
+			$('#preload').hide();
+		})
+	}
 
     // when window reload the screen go to top
     window.onbeforeunload = function () {
