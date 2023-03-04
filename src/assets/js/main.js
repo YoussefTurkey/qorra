@@ -7,9 +7,7 @@ $(document).ready(function () {
     })
 	// preloading with mobile size screen
 	if ($(window).width() <= 768) { 
-		window.addEventListener('load', function(){
-			$('#preload').hide();
-		})
+		$('#preload').hide();
 	}
 
     // when window reload the screen go to top
