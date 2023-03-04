@@ -3,7 +3,7 @@ import $ from 'jquery';
 $(document).ready(function () {
     // preloading
     window.addEventListener('load', function(){
-        $('#preload').hide();
+        $('#preload').css('display', 'none');
     })
 
     // when window reload the screen go to top
