@@ -64,6 +64,9 @@
     }
 }
 @media (max-width: 575px) {
+    .news {
+        margin: 50px 0 0 0 !important;
+    }
     .news .card{
         width: 80%;
         margin: auto;
@@ -76,7 +79,9 @@
         } 
         
         h2{
+            font-size: 37px !important;
             text-align: center;
+            margin: 0 0 50px 0 !important;
         }
     }
 }

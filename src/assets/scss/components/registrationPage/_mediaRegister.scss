@@ -1,0 +1,10 @@
+@media (max-width: 767px) {
+    .wizard-section .btn__container{
+        flex-direction: column;
+    }
+    .wizard-section a{
+        min-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+}

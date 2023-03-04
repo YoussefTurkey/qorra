@@ -56,10 +56,10 @@ const News = () => {
                             <Card.Title>أرابيســــك</Card.Title>
                             <Card.Text>
                             نعلن بكل حب عن الشراكة مع أرابيسك Art Space، آملين التوفيق والنجاح والتقدم لكلا الكيانيين.
-                            <p>#اقرأ_لتعرف</p>
-                            <p>#واعرف_لتكتب</p>
-                            <p>#واكتب_لِتُعَلِّم</p>
-                            <p>#قُرَّاءْ</p>
+                            <p className='dark_card_text'>#اقرأ_لتعرف</p>
+                            <p className='dark_card_text'>#واعرف_لتكتب</p>
+                            <p className='dark_card_text'>#واكتب_لِتُعَلِّم</p>
+                            <p className='dark_card_text'>#قُرَّاءْ</p>
                             </Card.Text>
                             <a role='button' href='/events' className='more'>للمزيد من المعلومات</a>
                         </Card.Body>
