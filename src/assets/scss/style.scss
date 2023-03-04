@@ -8,6 +8,7 @@
 @import './components/homePage/mediaHeader';
     // Importing Swipe Scss Files
 @import './components/homePage/swipe';
+@import './components/homePage/mediaSwipe';
     // Importing News Scss Files
 @import './components/homePage/news';
 @import './components/homePage/mediaNews';
@@ -32,3 +33,4 @@
     // Importing Events Scss Files
 @import './components/eventsPage/event';
 @import './components/eventsPage/contact';
+@import './components/eventsPage/mediaEvent';
