@@ -4,8 +4,8 @@ const BackToHome = () => {
   return (
     <>
         <a role='button' href='/' className='btn btn-primary back_to_home'>
-            <span>العودة إلى الصفحة الرئيسية</span>
-            <i class='bx bxs-left-arrow'></i>
+            <span>إلى الوراء</span>
+            <i className='bx bxs-left-arrow'></i>
         </a>
     </>
   )

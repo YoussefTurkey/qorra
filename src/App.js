@@ -4,6 +4,7 @@ import NotFound from './views/NotFound';
 import Join from './views/Join'
 import Loading from './views/Loading'
 import Events from './views/Events'
+import FormEvent from './components/EventsPage/FormEvent'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' exact component={Index} />
           <Route path='/join' component={Join} />
           <Route path='/events' component={Events}/>
+          <Route path='/formEvent' component={FormEvent}/>
           <Route path='*' component={NotFound} />
         </Switch>
       </Router>
