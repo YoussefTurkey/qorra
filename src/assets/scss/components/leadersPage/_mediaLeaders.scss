@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+    .leaders .team_lead .col img {
+        width: 100%;
+    }
+    .profile{
+        &:after{
+            bottom: 95%;
+
+        }
+        h1{
+            margin-bottom: 30px;
+        }  
+        
+        .profile_img{
+            flex-direction: column;
+            align-items: flex-start !important;
+    
+            > img{
+                width: 40% !important;
+                border-radius: 12px !important;
+            }
+    
+            > .profile_info{
+                padding-right: 0 !important;
+            }
+        }
+
+        .profile_txt .civil{
+            flex-wrap: wrap;
+        }
+    } 
+}

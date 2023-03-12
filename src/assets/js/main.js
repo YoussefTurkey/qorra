@@ -44,9 +44,29 @@ $(document).ready(function () {
         $('.navbar').toggleClass('dark_nav')
         $('.nav-link').toggleClass('dark_items')
         $('.join').toggleClass('dark_join')
-        $('p, h1, h2, h3, li, label').toggleClass('dark_txt');
+        $('p, h1, h2, h3, h4, h5, h6, li, label').toggleClass('dark_txt');
         $('.card-text').toggleClass('dark_card_text');
     })
+
+	// form Events
+	$("#whatsapp, #facebook, #website").hide();
+	$('.selection').on('change', function(){
+		if($('#whts').is(':selected')){
+			$("#whatsapp").fadeIn();
+			$('#facebook').hide();
+			$('#website').hide();
+		}
+		else if($('#face').is(':selected')){
+			$("#facebook").fadeIn();
+			$('#whatsapp').hide();
+			$('#website').hide();
+		}
+		else if($('#web').is(':selected')){
+			$("#website").fadeIn();
+			$('#facebook').hide();
+			$('#whatsapp').hide();
+		}
+	})
 });
 
 

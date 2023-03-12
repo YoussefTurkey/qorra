@@ -20,6 +20,7 @@ const Header = () => (
                         className="m-auto my-2 my-lg-0"
                         navbarScroll
                     >
+                        <Nav.Link href="/leaders">القادة</Nav.Link>
                         <Nav.Link href="#team">فريقنا</Nav.Link>
                         <Nav.Link href="#excellence">أهدافنا</Nav.Link>
                         <Nav.Link href="#last_news" id='news'>أخر الأخبار</Nav.Link>

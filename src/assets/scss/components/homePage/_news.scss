@@ -81,5 +81,6 @@
     transition: variables.$trans;
     &:hover{
         box-shadow: 0 0 50px -10px rgb(240 200 21 / 65%);
+        color: colors.$white_color;
     }
 }
