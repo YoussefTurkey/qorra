@@ -23,7 +23,7 @@ const Header = () => (
                         <Nav.Link href="/leaders">المتطوعون</Nav.Link>
                         <Nav.Link>الجريدة</Nav.Link>
                         <Nav.Link>البرامج والفاعليات</Nav.Link>
-                        <Nav.Link id='news'>من نحن</Nav.Link>
+                        <Nav.Link href="/we">من نحن</Nav.Link>
                         <Nav.Link id='top_screen' className='active'>الرئيسية</Nav.Link>
                     </Nav>
 

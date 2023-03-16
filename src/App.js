@@ -1,4 +1,5 @@
 import Index from './views/Index';
+import We from './views/We'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NotFound from './components/NotFound';
 import Join from './components/Join'
@@ -15,6 +16,7 @@ function App() {
         <Loading />
         <Switch>
           <Route path='/' exact component={Index} />
+          <Route path='/we' exact component={We} />
           <Route path='/join' component={Join} />
           <Route path='/events' component={Events}/>
           <Route path='/formEvent' component={FormEvent}/>
