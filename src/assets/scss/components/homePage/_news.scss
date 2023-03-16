@@ -1,16 +1,6 @@
 .news{
-    margin: 100px auto;
-
     .news_tit{
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: 35px;
-            width: 10%;
-            height: 5px;
-            background-color: colors.$yellow_color;
-        }
+        text-align: center;
 
         h2 {
             font-size: 50px;
@@ -62,10 +52,18 @@
             color: #4a4a4a;
             margin-bottom: 25px;
         }
+        
         q{
             display: block;
         }
 
+        .link{
+            transition: variables.$trans;
+            &:hover{
+                text-decoration: underline;
+                color: colors.$yellow_color;
+            }
+        }
     }
 }
 

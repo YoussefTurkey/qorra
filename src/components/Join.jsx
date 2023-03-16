@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Sign from '../components/Registeration/Sign'
-import Login from '../components/Registeration/Login'
+import Sign from './Registeration/Sign'
+import Login from './Registeration/Login'
 
 const Join = () => {
   return (

@@ -22,4 +22,27 @@
             position: relative !important;
         }
     }
+    .team_img{
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .team{
+        padding: 50px 0;
+    }
+    .team .about_txt .more{
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+}
+@-webkit-keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
 }

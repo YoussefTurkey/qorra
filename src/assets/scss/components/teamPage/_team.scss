@@ -1,5 +1,7 @@
 .team{
     overflow: hidden;
+    padding: 100px 0;
+
     .about_txt{
         h3{
             font-weight: 500;
@@ -9,6 +11,12 @@
         p{
             font-size: 20px;
             line-height: 2.5;
+            padding: 10px 0;
+        }
+
+        .more{
+            padding: 13px 70px;
+            border-radius: 10px;
         }
     }
 
@@ -79,6 +87,14 @@
                 display: inline-block;
                 width: 40px;
             }
+        }
+    }
+
+    .team_img{
+        > img{
+            border-radius: 50%;
+            box-shadow: colors.$shadow;
+            animation: 1.5s ease-in-out infinite float;
         }
     }
 

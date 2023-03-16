@@ -59,6 +59,18 @@
             display: block;
             margin: 0 0 auto 0;
         }
+
+        .navbar_dark{
+            background-color: colors.$yellow_color;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .navbar-brand{
+        > img{
+            width: 50%;
+            float: left;
+        }
     }
 }
 

@@ -1,27 +1,44 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-    // preloading
+    // ===== preloading =====
     window.addEventListener('load', function(){
         $('#preload').hide();
     })
-	// preloading with mobile size screen
+	// ===== preloading with mobile size screen =====
 	if ($(window).width() <= 768) { 
 		$('#preload').hide();
 	}
 
-    // when window reload the screen go to top
+	// ===== Scroll to top =====
+	var offSetTop = 100;
+	var $scrollToTopButton = $('.up');
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > offSetTop) {
+			$scrollToTopButton.fadeIn();
+		} else {
+			$scrollToTopButton.fadeOut();
+		}
+	});
+	//Click event to scroll to top
+	$scrollToTopButton.click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+
+    // ===== when window reload the screen go to top =====
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
 
-    // when click on nav-link gets active class
+    // ===== when click on nav-link gets active class =====
     $('.nav-link').click(function(){
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
     })
 
-    // when click on mouse to get active class to right nav-link
+    // ===== when click on mouse to get active class to right nav-link =====
     $('.scroll_down').on('click', function(){
         $('#news').addClass('active');
         $('#top_screen').removeClass('active');
@@ -31,24 +48,27 @@ $(document).ready(function () {
         $('#news').removeClass('active');
     })
 
-    // when click on main nav-lick to go to up
+    // ===== when click on main nav-lick to go to up =====
     $('#top_screen').click(function(event) {
 		event.preventDefault();
 		$('html, body').animate({scrollTop: 0}, 300);
 		return false;
 	});
 
-    // dark-theme-v.1
+    // ===== dark-theme-v.1 =====
     $('.dark_theme_icon').on('click', function(){
         $('body').toggleClass('dark_mode')
         $('.navbar').toggleClass('dark_nav')
         $('.nav-link').toggleClass('dark_items')
         $('.join').toggleClass('dark_join')
-        $('p, h1, h2, h3, h4, h5, h6, li, label').toggleClass('dark_txt');
+        $('p, h1, h2, h3, h4, h5, h6, li, label, small').toggleClass('dark_txt');
+		$('.excel_head').toggleClass('bg_colored');
+		$('.excel_data li').removeClass('dark_txt');
         $('.card-text').toggleClass('dark_card_text');
+		$('.navbar-toggler').toggleClass('navbar_dark')
     })
 
-	// form Events
+	// ===== form Events =====
 	$("#whatsapp, #facebook, #website").hide();
 	$('.selection').on('change', function(){
 		if($('#whts').is(':selected')){
@@ -70,7 +90,7 @@ $(document).ready(function () {
 });
 
 
-// Sign-Form-Code
+// ===== Sign-Form-Code =====
 $(document).ready(function() {
 	// click on next button
 	$('.form-wizard-next-btn').click(function() {

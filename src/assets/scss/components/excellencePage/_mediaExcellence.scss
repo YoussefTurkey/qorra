@@ -57,3 +57,11 @@
         }
     }
 }
+@media (max-width: 403px) {
+    .excellence .excellence_sec_tit h2::before {
+        left: 70%;
+    }
+    .excellence .excellence_sec_tit h2::after{
+        right: 70%;
+    }
+}

@@ -19,25 +19,25 @@ const Excellence = () => {
 
                     <Row className='excellence_main_info'>
                       <Col className='col-2 excellence_info'>
-                          <h4>الأول:
+                          <h4 className='excel_head'>الأول:
                             <span>لجان المبادرة</span>
                           </h4>
 
-                          <ul>
-                            <li>- لجنة التدريب</li>
+                          <ul className='excel_data'>
+                            <li>- لجنة التطوير</li>
+                            <li>- لجنة التقييم</li>
                             <li>- لجنة الإعلام</li>
-                            <li>- لجنة قياس الأداء</li>
                             <li>- لجنة العلاقات العامة والتنظيم</li>
                             <li>- إدارة المشروعات</li>
                           </ul>
                       </Col>
 
                       <Col className='col-2 excellence_info' id='sec_info'>
-                          <h4>الثاني:
+                          <h4 className='excel_head'>الثاني:
                             <span>أجنحة المبادرة</span>
                           </h4>
 
-                          <ul>
+                          <ul className='excel_data'>
                             <li>- جناح صون اللسان العربي</li>
                             <li>- جناح صناعة قارئ</li>
                             <li>- جناح الجريدة</li>
@@ -53,7 +53,7 @@ const Excellence = () => {
                               <span>لجان المبادرة</span>
                             </h4>
 
-                            <ul>
+                            <ul className='excel_data'>
                               <li>- لجنة التدريب</li>
                               <li>- لجنة الإعلام</li>
                               <li>- لجنة قياس الأداء</li>
@@ -67,7 +67,7 @@ const Excellence = () => {
                               <span>أجنحة المبادرة</span>
                             </h4>
 
-                            <ul>
+                            <ul className='excel_data'>
                               <li>- جناح صون اللسان العربي</li>
                               <li>- جناح صناعة قارئ</li>
                               <li>- جناح الجريدة</li>

@@ -22,4 +22,10 @@
             width: 10px;
             height: 100%;
         }
+    .swiper-button-prev{
+        color: colors.$yellow_color;
+    }
+    .swiper-button-next{
+        color: colors.$blue_color;
+    }
 }

@@ -11,6 +11,7 @@ body{
     background: radial-gradient(circle at 0 40%,rgba(56,109,179,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 100% 40%,rgba(104,51,226,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 50% 10%,rgba(49,252,255,.17),hsl(0deg 100% 50% / 0%) 25%);
     direction: rtl;
     position: relative;
+    overflow-x: hidden;
 }
 ul{
     list-style-type: none;

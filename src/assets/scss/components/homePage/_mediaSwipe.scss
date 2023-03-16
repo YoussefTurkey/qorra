@@ -1,5 +1,15 @@
 @media (max-width: 767px) {
     .swipping{
-        width: 100%;
+        padding: unset;
+        &::before{
+            right: -9px;
+        }
+        &::after{
+            left: -9px;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none
     }
 }

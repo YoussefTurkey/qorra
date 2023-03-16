@@ -1,9 +1,9 @@
 import Index from './views/Index';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NotFound from './views/NotFound';
-import Join from './views/Join'
-import Loading from './views/Loading'
-import Events from './views/Events'
+import NotFound from './components/NotFound';
+import Join from './components/Join'
+import Loading from './components/Loading'
+import Events from './components/Events'
 import FormEvent from './components/EventsPage/FormEvent'
 import Leaders from './components/leaderPage/Leaders'
 import Profile from './components/leaderPage/Profile'

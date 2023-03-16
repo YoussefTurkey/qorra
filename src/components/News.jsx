@@ -3,9 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import tegara from '../../assets/images/photos/tegara.jpg'
-import qaseda from '../../assets/images/photos/qaseda.jpg'
-import arabesk from '../../assets/images/photos/arabesk.jpg'
+import tegara from '../assets/images/photos/tegara.jpg'
+import qaseda from '../assets/images/photos/qaseda.jpg'
+import arabesk from '../assets/images/photos/arabesk.jpg'
 
 const News = () => {
   return (
@@ -13,7 +13,7 @@ const News = () => {
         <Container className='news' id='last_news'>
             <Row>
                 <Col className='news_tit'>
-                    <h2>أخر الأخبار عن <span>المبادرة</span></h2>
+                    <h2>أحدث <span>المقالات</span></h2>
                 </Col>
             </Row>
 
@@ -29,7 +29,7 @@ const News = () => {
                             والأستاذ الدكتور: وائل عبدالسلام، نائب رئيس الجامعة لشئون الطلاب.
                             والأستاذ الدكتور: السيد الصيفي، عميد كلية التجارة - جامعة الإسكندرية.
                             </Card.Text>
-                            <a role='button' href='/events/tegara' className='more'>للمزيد من المعلومات</a>
+                            <a role='button' href='/events/tegara' className='link'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -44,7 +44,7 @@ const News = () => {
                             إن الشِّعرَ لسانُ أمتنا العربية وتراثها الأصيل، وإن للغة الضاد مذاقًا خاصًا في الشعر، والشعر ليس لسان الشعراء والفقهاء فقط، بل العرب جميعًا.
                             ونَحنُ في قُرَّاء نؤمنُ أن لغتنا أشمل من أن تنطوي في فئةٍ بعينها، لذا قررنا عقد مسابقة "بيت القصيدة" للشعر الفصيح.
                             </Card.Text>
-                            <a role='button' href='/events/qaseda' className='more'>للمزيد من المعلومات</a>
+                            <a role='button' href='/events/qaseda' className='link'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -61,7 +61,7 @@ const News = () => {
                             <p className='dark_card_text'>#واكتب_لِتُعَلِّم</p>
                             <p className='dark_card_text'>#قُرَّاءْ</p>
                             </Card.Text>
-                            <a role='button' href='/events/arabisk' className='more'>للمزيد من المعلومات</a>
+                            <a role='button' href='/events/arabisk' className='link'>للمزيد من المعلومات</a>
                         </Card.Body>
                     </Card>
                 </Col>

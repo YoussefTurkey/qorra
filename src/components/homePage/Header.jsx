@@ -2,7 +2,7 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/qorra.png'
 
 const Header = () => (
     <>
@@ -20,15 +20,15 @@ const Header = () => (
                         className="m-auto my-2 my-lg-0"
                         navbarScroll
                     >
-                        <Nav.Link href="/leaders">القادة</Nav.Link>
-                        <Nav.Link href="#team">فريقنا</Nav.Link>
-                        <Nav.Link href="#excellence">أهدافنا</Nav.Link>
-                        <Nav.Link href="#last_news" id='news'>أخر الأخبار</Nav.Link>
-                        <Nav.Link href="#" id='top_screen' className='active'>الرئيسية</Nav.Link>
+                        <Nav.Link href="/leaders">المتطوعون</Nav.Link>
+                        <Nav.Link>الجريدة</Nav.Link>
+                        <Nav.Link>البرامج والفاعليات</Nav.Link>
+                        <Nav.Link id='news'>من نحن</Nav.Link>
+                        <Nav.Link id='top_screen' className='active'>الرئيسية</Nav.Link>
                     </Nav>
 
                     <a href='/join/login' className="btn btn-outline-primary join">
-                        شارك معنا
+                        تطوع معنا
                     </a>
                 </Navbar.Collapse>
 

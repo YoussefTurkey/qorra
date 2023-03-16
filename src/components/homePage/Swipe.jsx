@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 // import required modules
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import img01 from '../../assets/images/photos/img1.png'; 
 import img02 from '../../assets/images/photos/img2.png'; 
 import img03 from '../../assets/images/photos/img3.png'; 
@@ -30,9 +31,10 @@ const Swipe = () => {
                         }}
                         pagination={{
                         clickable: true,
-                        dynamicBullets: true,
+                        dynamicBullets: true
                         }}
-                        modules={[Autoplay, Pagination]}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
