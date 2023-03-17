@@ -1,11 +1,14 @@
 import { Container } from 'react-bootstrap'
 import leaderImg from '../../assets/images/leaders/turkey.jpg'
 import DarkMood from '../DarkMood'
-import BackToHome from '../EventsPage/BackToHome'
+import Header from '../homePage/Header'
+import Footer from '../Footer'
+import GoUp from '../GoUp'
 
 const Profile = () => {
   return (
     <>
+      <Header />
       <Container>
         <section className='profile'>
             <h1 className='profile_name'>م. يوسف <span>التركي</span></h1>
@@ -52,8 +55,9 @@ const Profile = () => {
         </section>
       </Container>
 
-      <BackToHome />
+      <Footer />
       <DarkMood />
+      <GoUp />
     </>
   )
 }

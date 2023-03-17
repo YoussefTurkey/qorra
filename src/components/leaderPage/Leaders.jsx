@@ -3,11 +3,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import leaderImg from '../../assets/images/leaders/turkey.jpg'
 import DarkMood from '../DarkMood'
-import BackToHome from '../EventsPage/BackToHome'
+import Header from '../homePage/Header';
+import GoUp from '../GoUp';
+import Footer from '../Footer';
 
 const Leaders = () => {
   return (
     <>
+      <Header />
       <section className='leaders'>
         <Container>
           <Row>
@@ -87,8 +90,9 @@ const Leaders = () => {
           </Row>
         </Container>
 
-        <BackToHome />
+        <Footer />
         <DarkMood />
+        <GoUp />
       </section>
     </>
   )
