@@ -1,12 +1,108 @@
 .we{
+    margin-top: 200px;
+
+    h2 {
+        font-size: 50px;
+        margin-bottom: 100px;
+        text-align: center;
+
+        > span{
+            background-image: linear-gradient(111deg,#5367ff,#e553ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 30%;
+                text-align: center;
+                background: url('../../../images/line.svg') center/contain no-repeat;
+                transform: translateX(-50%) rotate(0);
+                -webkit-transform: translateX(-50%) rotate(0);
+                z-index: -1;
+            }
+        }
+    }
+
     .swipe_slides{
         position: relative;
     
         .swiper{
             cursor: pointer;
-            position: absolute;
-            width: 98%;
+            width: 100%;
         }
     }
     
+    .we_desc{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 5%;
+            background: url('../../../images/rocket.svg') 0 0/100% 100% no-repeat;
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            z-index: -1;
+            animation: 1s ease-in-out infinite fly;
+        }
+
+        p{
+            font-size: 20px;
+            line-height: 2.5;
+            padding: 10px 0;
+        }
+    }
+
+    .we_count{
+        margin: 100px 0;
+        .col{
+            img{
+                display: block;
+                margin: auto;
+                width: 50%;
+            }
+
+            p{
+                text-align: center;
+                font-family: 'reqaa';
+                font-size: 20px;
+            }
+
+            .num{
+                font-size: 30px;
+                padding: 35px 0 5px 0;
+                color: colors.$yellow_color;
+            }
+        }
+    }
+
+    .we_proud{
+        .col{
+            margin: 10px 0;
+            img{
+                display: block;
+                margin: auto;
+                width: 20%;
+                
+            }
+
+            h4{
+                padding: 15px 0;
+            }
+            p{
+                font-family: 'reqaa';
+            }
+
+            h4,p{
+                text-align: center;
+            }
+        }
+    }
 }

@@ -65,7 +65,8 @@ $(document).ready(function () {
 		$('.excel_head').toggleClass('bg_colored');
 		$('.excel_data li').removeClass('dark_txt');
         $('.card-text').toggleClass('dark_card_text');
-		$('.navbar-toggler').toggleClass('navbar_dark')
+		$('.navbar-toggler').toggleClass('navbar_dark');
+		$('.contact label').toggleClass('dark-label')
     })
 
 	// ===== form Events =====

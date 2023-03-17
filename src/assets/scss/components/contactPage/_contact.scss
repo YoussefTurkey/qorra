@@ -1,0 +1,51 @@
+.contact{
+    margin-top: 200px;
+
+    h2 {
+        font-size: 50px;
+        text-align: center;
+
+        > span{
+            background-image: linear-gradient(111deg,#5367ff,#e553ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 30%;
+                text-align: center;
+                background: url('../../../images/line.svg') center/contain no-repeat;
+                transform: translateX(-50%) rotate(0);
+                -webkit-transform: translateX(-50%) rotate(0);
+                z-index: -1;
+            }
+        }
+    }
+
+    h4{
+        text-align: center;
+        font-family: 'reqaa';
+        color: colors.$yellow_color;
+        margin-bottom: 50px;
+    }
+
+    .wizard-section{
+        background: none;
+        position: initial;
+        transform: none;
+    }
+
+    .more{
+        width: 25%;
+    }
+
+    .dark-label{
+        color: colors.$yellow_color !important;
+    }
+}

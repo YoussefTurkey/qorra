@@ -1,0 +1,18 @@
+@media (max-width: 575px) {
+    .wrapper{
+        transform: translate(-50%, 150%);
+        -webkit-transform: translate(-50%, 150%);
+        h1{
+            font-size: 80px;
+        }
+    }
+}
+@media (max-width: 403px) {
+    .wrapper{
+        transform: translate(-50%, 180%);
+        -webkit-transform: translate(-50%, 180%);
+        h1{
+            font-size: 60px;
+        }
+    }
+}

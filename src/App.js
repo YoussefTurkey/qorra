@@ -8,6 +8,8 @@ import Events from './components/Events'
 import FormEvent from './components/EventsPage/FormEvent'
 import Leaders from './components/leaderPage/Leaders'
 import Profile from './components/leaderPage/Profile'
+import Gareda from './views/Gareda'
+import Contact from './views/Contact'
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Loading />
         <Switch>
           <Route path='/' exact component={Index} />
-          <Route path='/we' exact component={We} />
+          <Route path='/we' component={We} />
+          <Route path='/gareda' component={Gareda} />
+          <Route path='/contact' component={Contact} />
           <Route path='/join' component={Join} />
           <Route path='/events' component={Events}/>
           <Route path='/formEvent' component={FormEvent}/>

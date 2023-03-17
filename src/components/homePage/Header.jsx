@@ -11,7 +11,7 @@ const Header = () => (
                 
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 
-                <Navbar.Brand href="#">
+                <Navbar.Brand id='top_screen'>
                     <img src={logo} alt="قراء" />
                 </Navbar.Brand>
                 
@@ -20,11 +20,11 @@ const Header = () => (
                         className="m-auto my-2 my-lg-0"
                         navbarScroll
                     >
+                        <Nav.Link href="/contact">راسلنا</Nav.Link>
                         <Nav.Link href="/leaders">المتطوعون</Nav.Link>
-                        <Nav.Link>الجريدة</Nav.Link>
-                        <Nav.Link>البرامج والفاعليات</Nav.Link>
+                        <Nav.Link href="/gareda">الجريدة</Nav.Link>
                         <Nav.Link href="/we">من نحن</Nav.Link>
-                        <Nav.Link id='top_screen' className='active'>الرئيسية</Nav.Link>
+                        <Nav.Link href="/">الرئيسية</Nav.Link>
                     </Nav>
 
                     <a href='/join/login' className="btn btn-outline-primary join">
