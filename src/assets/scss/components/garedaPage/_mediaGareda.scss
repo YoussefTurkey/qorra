@@ -9,10 +9,12 @@
 }
 @media (max-width: 403px) {
     .wrapper{
+        width: 100%;
         transform: translate(-50%, 100%);
         -webkit-transform: translate(-50%, 100%);
         h1{
             font-size: 60px;
+            text-align: center;
         }
     }
 }
