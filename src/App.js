@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Router>
-        <Loading />
+        {/* <Loading /> */}
         <Switch>
           <Route path='/' exact component={Index} />
           <Route path='/we' component={We} />

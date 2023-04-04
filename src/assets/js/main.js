@@ -1,14 +1,14 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-    // ===== preloading =====
-    window.addEventListener('load', function(){
-        $('#preload').hide();
-    })
-	// ===== preloading with mobile size screen =====
-	if ($(window).width() <= 768) { 
-		$('#preload').hide();
-	}
+    // // ===== preloading =====
+    // window.addEventListener('load', function(){
+    //     $('#preload').hide();
+    // })
+	// // ===== preloading with mobile size screen =====
+	// if ($(window).width() <= 768) { 
+	// 	$('#preload').hide();
+	// }
 
 	// ===== Scroll to top =====
 	var offSetTop = 100;
