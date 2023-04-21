@@ -12,8 +12,6 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import img01 from '../../assets/images/photos/img1.png'; 
 import img02 from '../../assets/images/photos/img2.png'; 
-import img03 from '../../assets/images/photos/img3.png'; 
-import img04 from '../../assets/images/photos/img4.png'; 
 
 const Swipe = () => {
   return (
@@ -38,16 +36,10 @@ const Swipe = () => {
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <img src={img01} alt="khassan kanafy" />
+                            <img src={img01} alt="El-Gareeda" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={img02} alt="mamdouh darwish" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={img03} alt="almanfaloty" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={img04} alt="alrafay" />
+                            <img src={img02} alt="El-Gareeda-Qorra" />
                         </SwiperSlide>
                     </Swiper>
                 </Col>

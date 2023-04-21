@@ -65,6 +65,12 @@
             }
         }
     }
+
+    #postsMore{
+        display: block;
+        margin: auto;
+        box-shadow: colors.$shadow;
+    }
 }
 
 .more{

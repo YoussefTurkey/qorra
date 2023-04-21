@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import teamImg from '../../assets/images/photos/qorra_screen.jpg'
+import teamImg from '../../assets/images/photos/gareeda_screen.png'
 
 const Team = () => {
   return (
@@ -16,7 +16,7 @@ const Team = () => {
 
                 <Row>
                     <Col className='col-12 col-sm-12 col-md-8 about_txt'>
-                      <h3>نحن هنا منذ 2020م</h3>
+                      <h3>نحن هنا منذ 2021م</h3>
                       <p className='info'>
                           تقدم قُرَّاءْ تدريبات أكاديمية وتخصصية ومهارية لكل لجنة خاصة
                           بوظيفتها. مثال: لجنة الإعلام يأخذ الشخص المُنضم حديثاً للجنة

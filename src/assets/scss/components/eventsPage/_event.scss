@@ -1,22 +1,17 @@
 .events{
     margin: 35px auto;
 
-    .eventImg{
-        border-radius: 20px;
-        box-shadow: 5px 7px 14px rgba(0 0 0 / 15%);
-        display: block;
-        margin: auto;
-    }
+    .post{
+        > img{
+            display: block;
+            margin: 35px auto;
+            border-radius: variables.$radius;
+            box-shadow: colors.$shadow;
+        }
 
-    .eventTxt{
-        margin: 50px 0 auto;
-        line-height: 2;
-        font-size: 18px;
-    }
-
-    ul{
-        list-style-type: disc;
-        padding-right: 20px;
+        .content{
+            padding: 0 60px;
+        }
     }
 
 }

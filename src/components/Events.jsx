@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Arabisk from './EventsPage/posts/Arabisk'
-import Tegara from './EventsPage/posts/Tegara'
-import Qaseda from './EventsPage/posts/ByetQaseda'
+import Post from './EventsPage/posts/post'
 import DarkMood from './DarkMood'
 import BackToHome from './EventsPage/BackToHome'
 
@@ -10,9 +8,7 @@ const Events = () => {
     <>
         <Router>
             <Switch>
-                <Route path='/events/arabisk' component={Arabisk} />
-                <Route path='/events/tegara' component={Tegara} />
-                <Route path='/events/qaseda' component={Qaseda} />
+                <Route path='/events/post' component={Post} />
             </Switch>
         </Router>
 

@@ -37,8 +37,14 @@ const FormEvent = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>صورة المنشور</Form.Label>
-                        <Form.Control type="file" accept="image/png, image/gif, image/jpeg" />
+                        <div className="select_inpts">
+                            <Form.Label>صورة المنشور الخارجية</Form.Label>
+                            <Form.Label>صورة المنشور الداخلية</Form.Label>
+                        </div>
+                        <div className="select_inpts">
+                            <Form.Control type="file" accept="image/png, image/gif, image/jpeg" />  
+                            <Form.Control type="file" accept="image/png, image/gif, image/jpeg" />  
+                        </div>
                     </Form.Group>
 
                     <Form.Group className="mb-3">

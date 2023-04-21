@@ -15,13 +15,9 @@ const Login = () => {
                             <div className="social">
                               <p>قم بالتسجيل من خلال المواقع التواصل الإجتماعي</p>
                               <div className="btn__container">
-                                  <a href="#" className="btn">
-                                      <span>instagram</span>
-                                      <i className='bx bxl-instagram'></i>
-                                  </a>
                                   <a href="#" className="btn-f">
-                                      <span>facebook</span>
-                                      <i className='bx bxl-facebook-square'></i>
+                                      <span>linkedin</span>
+                                      <i className='bx bxl-linkedin-square'></i>
                                   </a>
                                   <a href="#" className="btn-g">
                                       <span>Google</span>

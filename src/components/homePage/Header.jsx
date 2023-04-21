@@ -22,7 +22,7 @@ const Header = () => (
                     >
                         <Nav.Link href="/contact">راسلنا</Nav.Link>
                         <Nav.Link href="/leaders">المتطوعون</Nav.Link>
-                        <Nav.Link href="/gareda">الجريدة</Nav.Link>
+                        {/* <Nav.Link href="/gareda">الجريدة</Nav.Link> */}
                         <Nav.Link href="/we">من نحن</Nav.Link>
                         <Nav.Link href="/">الرئيسية</Nav.Link>
                     </Nav>

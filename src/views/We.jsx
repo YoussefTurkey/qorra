@@ -19,10 +19,6 @@ import slid04 from '../assets/images/photos/slid-04.jpg'
 import slid05 from '../assets/images/photos/slid-05.jpg'
 import slid06 from '../assets/images/photos/slid-06.jpg'
 import slid07 from '../assets/images/photos/slid-07.jpg'
-import slid08 from '../assets/images/photos/slid-08.jpg'
-import slid09 from '../assets/images/photos/slid-09.jpg'
-import slid10 from '../assets/images/photos/slid-10.jpg'
-import slid11 from '../assets/images/photos/slid-11.jpg'
 import vol from '../assets/images/participant.svg'
 import follow from '../assets/images/followers.svg'
 import learn from '../assets/images/learning.svg'
@@ -38,7 +34,7 @@ const We = () => {
       <Header />
       <section className="we">
           <Container>
-              <h2>لمحة عن <span>المبادرة</span></h2>
+              <h2>لمحة عن <span>الجريدة</span></h2>
               <Row>
                   <Col className='col-12 col-sm-12 col-md-6 swipe_slides'>
                       <Swiper
@@ -75,18 +71,6 @@ const We = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                           <img src={slid07} alt="فريق قراء" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <img src={slid08} alt="فريق قراء" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <img src={slid09} alt="فريق قراء" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <img src={slid10} alt="فريق قراء" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <img src={slid11} alt="فريق قراء" />
                         </SwiperSlide>
                       </Swiper>
                   </Col>
