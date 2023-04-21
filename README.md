@@ -36,6 +36,6 @@
     - ' >> npm i react-form-stepper '
     - ' >> npm install react-form-stepper --save '
 
-**[رابط الموقع](https://qorra-git-gareeda-youssefturkey.vercel.app/**
+**[رابط الموقع](https://qorra-git-gareeda-youssefturkey.vercel.app/)**
 
 ###### *شكراً جزيلاً* :wave:
