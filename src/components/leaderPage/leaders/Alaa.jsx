@@ -1,9 +1,9 @@
 import { Container } from 'react-bootstrap'
-import leaderImg from '../../assets/images/leaders/man.jpg'
-import DarkMood from '../DarkMood'
-import Header from '../homePage/Header'
-import Footer from '../Footer'
-import GoUp from '../GoUp'
+import leaderImg from '../../../assets/images/leaders/alaa.jpg'
+import DarkMood from '../../DarkMood'
+import Header from '../../homePage/Header'
+import Footer from '../../Footer'
+import GoUp from '../../GoUp'
 
 const Profile = () => {
   return (
@@ -11,20 +11,21 @@ const Profile = () => {
       <Header />
       <Container>
         <section className='profile'>
-            <h1 className='profile_name'>أ. سين <span>الفلاني</span></h1>
-            <h2><span>نائب / مُنسق</span> جناح الجريدة لسنة 2023</h2>
+            <h1 className='profile_name'>م. محمد <span>علاء الدين</span></h1>
+            <h2><span>رئيس</span> مبادرة قُرَّاءْ لسنة 2023</h2>
 
             <div className="profile_img mt-5">
                 <img src={leaderImg} alt="leader" />
                 
                 <div className="profile_info">
-                  <p>المهندس يوسف التركي. رئيس لجنة التقييم لعام 2023م، يعمل في مجال تطوير المواقع الإلكترونية منذ عام 2019م</p>
-                  <p><a role='button' href='https://youssefturkey.github.io/YoussefTurkey_CV/' target='_blank' className='resume'>السيرة الذاتية</a></p>
+                  <p>المهندس محمد علاء الدين. رئيس المبادرة لعام 2023م، يعمل في مجال التدريب والتيسير منذ عام 2019م</p>
+                  <p><a role='button' href='' target='_blank' className='resume'>السيرة الذاتية</a></p>
                 </div>
             </div>
 
             <div className="profile_txt mt-5">
-                <p>البشمهندس <b>يوسف التركي</b> خريج كلية العلوم بجامعة الإسكندرية عام 2022م.</p>
+                <p>البشمهندس <b>محمد علاء</b> طالب بكلية الهندسة الزراعية بجامعة الإسكندرية.</p>
+                
                 <p>كان مصمم جرافيكي في شركة <b>Herbal Globe</b> لعام 2022، ومن ثَم إنتقل إلى عالم البرمجيات فعمل كمصمم ومطور واجهات المواقع الإلكترونية في شركة <b>US Legalization</b> لعام 2023.</p>
                 <p><i className='bx bx-chevrons-left' ></i> شارك في الأعمال التطوعية في مجالي تدريب المدربين والتصميم الجرافيكي، ومن الأماكن التى تطوع بها:
                 </p>

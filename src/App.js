@@ -7,14 +7,21 @@ import Loading from './components/Loading'
 import Events from './components/Events'
 import FormEvent from './components/EventsPage/FormEvent'
 import Leaders from './components/leaderPage/Leaders'
-import Profile from './components/leaderPage/Profile'
 import Contact from './views/Contact'
+// Leaders-Pages
+import Profile from './components/leaderPage/Profile'
+import Alaa from './components/leaderPage/leaders/Alaa'
+import Aya from './components/leaderPage/leaders/Aya'
+import Head from './components/leaderPage/leaders/Head'
+import Media from './components/leaderPage/leaders/Media'
+import Tahreer from './components/leaderPage/leaders/Tahreer'
+import PR from './components/leaderPage/leaders/PR'
 
 function App() {
   return (
     <>
       <Router>
-        {/* <Loading /> */}
+        <Loading />
         <Switch>
           <Route path='/' exact component={Index} />
           <Route path='/we' component={We} />
@@ -24,6 +31,12 @@ function App() {
           <Route path='/formEvent' component={FormEvent}/>
           <Route path='/leaders' component={Leaders}/>
           <Route path='/profile' component={Profile}/>
+          <Route path='/alaa' component={Alaa}/>
+          <Route path='/aya' component={Aya}/>
+          <Route path='/head' component={Head}/>
+          <Route path='/media' component={Media}/>
+          <Route path='/tahreer' component={Tahreer}/>
+          <Route path='/pr' component={PR}/>
           <Route path='*' component={NotFound} />
         </Switch>
       </Router>

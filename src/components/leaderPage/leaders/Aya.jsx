@@ -1,9 +1,9 @@
 import { Container } from 'react-bootstrap'
-import leaderImg from '../../assets/images/leaders/man.jpg'
-import DarkMood from '../DarkMood'
-import Header from '../homePage/Header'
-import Footer from '../Footer'
-import GoUp from '../GoUp'
+import leaderImg from '../../../assets/images/leaders/hijab.jpg'
+import DarkMood from '../../DarkMood'
+import Header from '../../homePage/Header'
+import Footer from '../../Footer'
+import GoUp from '../../GoUp'
 
 const Profile = () => {
   return (
@@ -11,8 +11,8 @@ const Profile = () => {
       <Header />
       <Container>
         <section className='profile'>
-            <h1 className='profile_name'>أ. سين <span>الفلاني</span></h1>
-            <h2><span>نائب / مُنسق</span> جناح الجريدة لسنة 2023</h2>
+            <h1 className='profile_name'>أ. آية <span>عباسي</span></h1>
+            <h2><span>رئيس</span> الأجنحة بمبادرة قُرَّاءْ لسنة 2023</h2>
 
             <div className="profile_img mt-5">
                 <img src={leaderImg} alt="leader" />

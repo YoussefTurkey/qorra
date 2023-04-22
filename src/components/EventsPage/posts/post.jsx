@@ -29,6 +29,7 @@ const post = () => {
                     >
                         <SwiperSlide className='post'>
                             <img src={img01} alt="El-Gareeda" />
+
                             <Row className='content'>
                                 <Col className='col-12 col-sm-12 col-md-3'>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus?</p>
@@ -146,9 +147,16 @@ const post = () => {
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus?</p>
                                 </Col>
                             </Row>
+
+                            <section className="eventIcon">
+                                <button className="more">
+                                    <a href="https://web.facebook.com/profile.php?id=100067438936034" target='_blank'><i className='bx bxl-facebook-circle' ></i> الفيسبوك</a>
+                                </button>
+                            </section>
                         </SwiperSlide>
                         <SwiperSlide className='post'>
                             <img src={img02} alt="El-Gareeda-Qorra" />
+
                             <Row className='content'>
                                 <Col className='col-12 col-sm-12 col-md-3'>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus?</p>
@@ -266,12 +274,18 @@ const post = () => {
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus?</p>
                                 </Col>
                             </Row>
+
+                            <section className="eventIcon">
+                                <button className="more">
+                                    <a href="https://web.facebook.com/profile.php?id=100067438936034" target='_blank'><i className='bx bxl-facebook-circle' ></i> الفيسبوك</a>
+                                </button>
+                            </section>
                         </SwiperSlide>
                     </Swiper>
                 </Col>
             </Row>
 
-            <ContactPost />
+            {/* <ContactPost /> */}
         </Container>
     </>
   )
