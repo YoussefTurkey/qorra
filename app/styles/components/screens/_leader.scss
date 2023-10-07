@@ -1,0 +1,179 @@
+.leaders{
+    margin: 150px auto;
+    padding: 0 100px;
+
+    .lead_title{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0px;
+            width: 7%;
+            height: 4px;
+            background-color: colors.$yellow_color;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 50px 0;
+
+            > span{
+                background-image: linear-gradient(111deg,#5367ff,#e553ff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 60px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 100%;
+                    width: 30%;
+                    text-align: center;
+                    background: url('/assets/images/line.svg') center/contain no-repeat;
+                    transform: translateX(-50%) rotate(0);
+                    -webkit-transform: translateX(-50%) rotate(0);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .team_lead{
+        a{
+            margin: 30px 0;
+            color: colors.$black_color;
+            cursor: pointer;
+            width: 100%;
+
+            &:hover{
+                img{
+                    filter: grayscale(0);
+                }
+
+                h5::after{
+                    content: '';
+                    background-color: colors.$yellow_color;
+                    width: 20%;
+                    height: 3px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0;
+                }
+            }
+
+            img{
+                width: 75%;
+                border-radius: 12px;
+                box-shadow: colors.$shadow;
+                transition: variables.$trans;
+                filter: grayscale(50%);
+            }
+
+            > h5{
+                padding: 10px 0;
+                font-weight: 600;
+                position: relative;
+                transition: variables.$trans;
+            }
+        }
+    }
+}
+
+.profile{
+    margin-top: 170px;
+    padding: 0 100px;
+    position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 92%;
+            right: 102px;
+            width: 10%;
+            height: 4px;
+            background-color: colors.$yellow_color;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 50px;
+
+            > span{
+                background-image: linear-gradient(111deg,#5367ff,#e553ff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 100%;
+                    width: 30%;
+                    text-align: center;
+                    background: url('/assets/images/line.svg') center/contain no-repeat;
+                    transform: translateX(-50%) rotate(0);
+                    -webkit-transform: translateX(-50%) rotate(0);
+                    z-index: -1;
+                }
+            }
+        }
+        
+    .profile_img{
+        display: flex;
+        align-items: center;
+
+        > img{
+            width: 10%;
+            border-radius: 50%;
+            box-shadow: colors.$shadow;
+        }
+
+        > .profile_info{
+            padding-right: 20px;
+            font-size: 25px;
+        }
+    }
+
+    .profile_txt{
+        font-size: 20px;
+        line-height: 2;
+
+        b{
+            color: colors.$yellow_color;
+        }
+
+        .civil{
+            display: flex;
+
+            li{
+                padding: 5px 15px;
+            }
+        }
+
+        .certificates{
+            padding-right: 15px;
+        }
+
+        .projects{
+            li a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .resume{
+        font-size: 20px;
+        transition: variables.$trans;
+        border-radius: 12px;
+        color: colors.$blue_color;
+        &:hover{
+            color: colors.$yellow_color;
+            text-decoration: underline;
+        }
+    }
+}

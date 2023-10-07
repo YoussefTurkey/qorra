@@ -1,0 +1,51 @@
+.navbar{
+    margin: 10px auto;
+    width: 50%;
+    padding: 0 25px;
+    border-radius: calc(variables.$radius + 20px);
+    box-shadow: colors.$shadow;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    transition: variables.$trans;
+    animation: mover 1s infinite  alternate;
+
+    .navbar-brand{
+        width: 8%;
+        margin: 0 0 0 auto;
+        display: block;
+    }
+    #top_screen{
+        cursor: pointer;
+    }
+
+    .links{
+        > li{
+            padding: 0 15px;
+            font-size: variables.$h4_size;
+            font-weight: bold;
+            color: colors.$blue_color;
+
+            .active{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: -100%;
+                    width: calc(100%);
+                    height: 15px;
+                    background: url('../../../../public/assets/images/underLine.svg') 0 0/100% 100% no-repeat;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+                }
+            }
+        }
+
+    }
+}

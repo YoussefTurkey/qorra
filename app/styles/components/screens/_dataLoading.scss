@@ -1,0 +1,10 @@
+// Preloading
+#preload{
+    background: #fff url('/assets/images/Ripple-1s-200px.gif') no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000000;
+}

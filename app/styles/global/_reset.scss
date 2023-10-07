@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'arabic-font', sans-serif;
+    background: radial-gradient(circle at 0 40%,rgba(56,109,179,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 100% 40%,rgba(104,51,226,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 50% 10%,rgba(49,252,255,.17),hsl(0deg 100% 50% / 0%) 25%);
+    direction: rtl;
+    position: relative;
+    overflow-x: hidden;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+p{
+    margin-bottom: 0.5rem;
+}
+main{
+    min-height: calc( 100vh - 260px );
+}
+.more{
+    background-image: linear-gradient(135deg,#f09c15,#fbff00) !important;
+    color: #333;
+    border: 0;
+    border-radius: 20px;
+    visibility: visible;
+    padding: 12.5px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &:hover{
+        box-shadow: 0 0 50px -10px rgb(240 200 21 / 65%);
+        color: #fff;
+    }
+}
+    // ===== Selecting Elements Color =====
+::selection {
+    background: #fece2f;
+    color: #fff;
+}
+    // ===== Scrollbar CSS =====
+  /* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5165fd #fff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5165fd;
+    border-radius: 7px;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'arabic-font';
+    src: url('../../../public/assets/fonts/Montserrat-Arabic-Regular.ttf');
+}
+
+// dark-theme
+.dark_mode{
+    background-color: #333;
+}
+.dark_nav{
+    background: rgba(0, 0, 0, 0.16) !important;
+    backdrop-filter: blur(3.7px) !important;
+    -webkit-backdrop-filter: blur(3.7px) !important;
+    border: 1px solid rgb(254 206 47 / 31%) !important;
+
+    .dark_items{
+        color: #fff !important;
+    }
+
+    .dark_join{
+        border: 2px solid #f2a613 !important;
+        color: #f2a613 !important;
+        &:hover{
+            background-color: #f2a613 !important;
+            color: #fff !important;
+        }
+    }
+}
+.dark_txt{
+    color: #fff !important;
+}
+.dark_card_text{
+    color: #333 !important;
+}
+// dark-icon-theme
+.dark_theme_icon{
+    position: fixed;
+    bottom: 35px;
+    right: 25px;
+    width: 3%;
+    cursor: pointer;
+    animation: 1.5s ease-in-out infinite float;
+}
+
+// Preloading
+#preload{
+    background: #fff url(../../../public/assets/images/Ripple-1s-200px.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000000;
+}
+
+@-webkit-keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px);}
+}
+
+@media (max-width: 767px) {
+    .dark_theme_icon{
+        width: 10%;
+    }
+}

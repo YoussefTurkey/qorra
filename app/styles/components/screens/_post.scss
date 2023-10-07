@@ -1,0 +1,44 @@
+.events{
+    margin: 35px auto;
+    padding: 0 100px;
+
+    .eventImg{
+        border-radius: 20px;
+        box-shadow: 5px 7px 14px rgba(0 0 0 / 15%);
+        display: block;
+        margin: auto;
+    }
+
+    .eventTxt{
+        margin: 50px 0 auto;
+        line-height: 2;
+        font-size: 18px;
+    }
+
+    .social{
+        > a {
+            margin: 10px 0;
+
+            span{
+                padding: 0 5px;
+                color: colors.$blue_color;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: colors.$yellow_color;
+                }
+            }
+
+            .icon{
+                color: colors.$blue_color;
+            }
+        }
+    }
+
+    .more{
+        margin-top: 34px;
+        display: block;
+        width: fit-content;
+    }
+}

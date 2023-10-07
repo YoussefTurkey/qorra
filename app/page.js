@@ -1,113 +1,238 @@
-import Image from 'next/image'
+"use client"
+  // Import React Components
+import React, { useRef, useState } from "react"
+import Image from "next/image";
+import Link from "next/link";
+import Error from "./components/Error";
+import DataLoading from '@/app/components/DataLoading'
+  // Import External Lib
+import useSWR from "swr";
+import axios from "axios";
+  // Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+  // Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+  // import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 export default function Home() {
+  
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+
+  const { data, error } = useSWR(
+    "/db/data.json",
+    fetcher
+  );
+  if (error) return <Error />;
+  if (!data) return <DataLoading />;
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <Image src={'/assets/images/photos/img1.png'} width={1739} height={715.52} loading="lazy" alt="khassan kanafy"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={'/assets/images/photos/img2.png'} width={1739} height={715.52} loading="lazy" alt="mamdouh darwish"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={'/assets/images/photos/img3.png'} width={1739} height={715.52} loading="lazy" alt="almanfaloty"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={'/assets/images/photos/img4.png'} width={1739} height={715.52} loading="lazy" alt="alrafay"/>
+        </SwiperSlide>
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
         </div>
-      </div>
+      </Swiper>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="about">
+        <div className="title">
+          <h1>مَن <span>قُرَّاءْ</span></h1>
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="info grid lg:grid-cols-2 lg:gap-6 lg:items-center md:grid-cols-1">
+          <div className="info_txt">
+            <h3>نحن هنا منذ 2020م</h3>
+            <p>
+              قراء هي مبادرة مجتمعية تهدف إلى تنمية المجتمع من خلال تقديم التدريبات الأكاديمية والتخصصية
+                والمهارية لكل لجنة من لجان المبادرة، حيثُ يَأْخُذُ كلُّ شَخْصٍ يَنْضَمُّ حَدِيثًا
+                للجنةٍ تدريباتٍ أكاديمية وعملية في مجالِ اللجنةِ الخاصةِ به؛
+                ليكون قادرًا على تأدية مهام اللجنة بثقة وكفاءة وفاعلية.
+            </p>
+            <p>
+              ولتعزيز المزيد من المهارات والمعرفة، تتولى أجنحة خاصة مهمة التدريب والتعليم وزيادة الثقافة،
+                مثل جناح صون اللسان العربي الذي يقدم مداخلا للغة العربية تتضمن ورشًا تفاعلية وتدريبات
+                أكاديمية لتحسين مهارات اللغة العربية بكفاءة عالية وبطريقة ممتعة.
+            </p>
+            <Link href={'/pages/we'} className='more'>تعرف علينا أكثر</Link>
+          </div>
+          
+          <div className="info_img">
+            <Image src={'/assets/images/photos/qorra_screen.jpg'} className="rounded-full" height={450} width={450} alt="قراء" loading="lazy" />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="service">
+        <div className="title">
+          <h2>ماذا تقدم <span>قُرَّاءْ</span>؟</h2>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        <div className='logo'>
+          <Image src={'/assets/images/qorra.png'} width={200} height={200} loading="lazy" alt="qorra-logo" />
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="service_details">
+          <div className='committes'>
+              <h4 className='committe_head'>الأول:
+                <span>لجان المبادرة</span>
+              </h4>
+
+              <ul className='committe_data'>
+                <li>- لجنة التقييم والتطوير</li>
+                <li>- لجنة الإعلام</li>
+                <li>- لجنة العلاقات العامة والتنظيم</li>
+                <li>- إدارة المشروعات</li>
+              </ul>
+          </div>
+
+          <div className='wings' id='sec_info'>
+              <h4 className='wing_head'>الثاني:
+                <span>أجنحة المبادرة</span>
+              </h4>
+
+              <ul className='wing_data'>
+                <li>- جناح صون اللسان العربي</li>
+                <li>- جناح صناعة قارئ</li>
+                <li>- جناح الجريدة</li>
+                <li>- جناح البحث العلمي</li>
+                <li>- جناح الخدمة المدنية</li>
+              </ul>
+          </div>
+        </div>
+
+        <div className="service_query">
+          <div className='committes_hide'>
+              <h4 className='committe_head font-bold text-2xl py-[10px]'>الأول:
+                <span>لجان المبادرة</span>
+              </h4>
+
+              <ul className='committe_data'>
+                <li>- لجنة التقييم والتطوير</li>
+                <li>- لجنة الإعلام</li>
+                <li>- لجنة العلاقات العامة والتنظيم</li>
+                <li>- إدارة المشروعات</li>
+              </ul>
+          </div>
+
+          <div className='wings_hide'>
+              <h4 className='wing_head font-bold text-2xl py-[10px]'>الثاني:
+                <span>أجنحة المبادرة</span>
+              </h4>
+
+              <ul className='wing_data'>
+                <li>- جناح صون اللسان العربي</li>
+                <li>- جناح صناعة قارئ</li>
+                <li>- جناح الجريدة</li>
+                <li>- جناح البحث العلمي</li>
+                <li>- جناح الخدمة المدنية</li>
+              </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="goals">
+        <div className="title">
+          <h2> <span>أهدافنا</span> </h2>
+        </div>
+
+        <div className="info">
+          <p>تحقيق التنمية الثقافية والإجتماعية كجزء من التنمية المستدامة.</p>
+          <p>ممارسة اللغة العربية الفصيحة من خلال ورش اللغة.</p>
+          <p>تدريب المشاركين على مهارات القيادة الفعالة.</p>
+          <p>تثقيف المشاركين بالقراءة والتدريبات.</p>
+          <p>دراسة التاريخ العربي.</p>
+          <p>إعطاء المشاركين أساسيات البحث العلمي والتعلم الذاتي.</p>
+          <p>إعادة استخدام التراث والقيم العربية.</p>
+          <p>العمل على محو الأمية.</p>
+          <p>زيادة الوعي بأهم قضايا المجتمع والسعي لإيجاد حلول لها.</p>
+        </div>
+      </section>
+
+      <section className="events">
+        <div className="title">
+          <h2>أحدث <span>الفاعليات</span></h2>
+        </div>
+
+        <div className="cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6">
+          {
+            data.events.map(post => {
+              return(
+                <div className="card" key={post.id}>
+                  <Image src={post.imgPost} width={400} height={400} loading="lazy" alt="" />
+
+                  <div className="card_info">
+                    <h3>{post.title}</h3>
+                    <p>{post.subTitle}</p>
+                    <Link href={`/pages/posts/${post.id}`} role="button" className='link'>للمزيد من المعلومات</Link>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+
+        <Link href={'/'} className="more block mx-auto my-5 w-fit" role="button">للمزيد من المقالات...</Link>
+      </section>
+      
+      <section className="partners">
+        <div className="title">
+          <h2><span>شركائنا</span></h2>
+        </div>
+
+        <div className="flex justify-around items-center mb-10 logos">
+          <div>
+            <Image src={'/assets/images/business.png'} width={100} height={100} loading="lazy" alt="كلية تجارة" />
+          </div>
+          <div>
+          <Image src={'/assets/images/mdarj.png'} width={100} height={100} loading="lazy" alt="مدارج" />
+          </div>
+          <div>
+            <Image src={'/assets/images/mezza.png'} width={100} height={100} loading="lazy" alt="ميزة" />
+          </div>
+          <div>
+            <Image src={'/assets/images/arabisk.png'} width={100} height={100} loading="lazy" alt="أرابيسك" />
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

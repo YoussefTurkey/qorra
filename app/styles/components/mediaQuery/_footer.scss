@@ -1,0 +1,22 @@
+@font-face {
+    font-family: reqaa;
+    src: url('/assets/fonts/THARWATEMARARUQAALIGHT.ttf');
+}
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+
+        > div:not(:first-child){
+            padding: 25px;
+        }
+    }
+    .up{
+        width: 10%;
+    }
+}
+@media (max-width: 403px) {
+    .up{
+        bottom: 27px;
+        width: 13%;
+    }
+}

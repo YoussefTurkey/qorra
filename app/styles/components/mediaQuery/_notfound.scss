@@ -1,0 +1,10 @@
+.not_found{
+    overflow: hidden;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+
+    .error-container{
+        margin: -24px 15px;
+    }
+}

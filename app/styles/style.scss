@@ -1,0 +1,26 @@
+// importing global style
+@use './global/reset';
+@use './global/colors';
+@use './global/variables';
+    // importing TailwindCSS style
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    // importing from the largest screens to tablet screens
+@import './components/screens/header';
+@import './components/screens/footer';
+@import './components/screens/mainpage';
+@import './components/screens/notfound';
+@import './components/screens/dataLoading';
+@import './components/screens/post';
+@import './components/screens/we';
+@import './components/screens/contact';
+@import './components/screens/leader';
+    // importing mobile screens
+@import './components/mediaQuery/header';
+@import './components/mediaQuery/footer';
+@import './components/mediaQuery/mainpage';
+@import './components/mediaQuery/notfound';
+@import './components/mediaQuery/we';
+@import './components/mediaQuery/contact';
+@import './components/mediaQuery/leader';
