@@ -214,7 +214,7 @@ export default function Home() {
             }
           </div>
 
-          <Link href={'/'} className="more block mx-auto my-5 w-fit" role="button">للمزيد من المقالات...</Link>
+          {/* <Link href={'/'} className="more block mx-auto my-5 w-fit" role="button">للمزيد من المقالات...</Link> */}
         </section>
         
         <section className="partners">
