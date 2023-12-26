@@ -2,7 +2,9 @@ import React from 'react'
 
 const dataLoading = () => {
   return (
-    <div id="preload"></div>
+    <>
+      <div id="preload"></div>
+    </>
   )
 }
 

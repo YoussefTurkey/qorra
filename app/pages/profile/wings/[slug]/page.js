@@ -3,12 +3,14 @@
 import React, { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Error from "@/app/components/Error";
-import DataLoading from '@/app/components/DataLoading'
+import dynamic from 'next/dynamic';
     // Import External Lib
 import useSWR from "swr";
 import axios from "axios";
 import { FaAnglesLeft, FaCheckDouble} from "react-icons/fa6";
+
+const DataLoading = dynamic( ()=>import('@/app/components/Error') )
+const Error = dynamic( ()=>import('@/app/components/DataLoading') )
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 

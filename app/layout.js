@@ -1,8 +1,7 @@
 'use client'
 import './styles/style.scss'
 // import './js/main'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation'
 
 export const metadata = {
@@ -10,14 +9,19 @@ export const metadata = {
   description: 'مبادرة عربية تستقضب الشباب لبناء مجتمع عربي منتمي لهٌويته العربية',
 }
 
+const Header = dynamic( ()=> import('./components/Header') )
+const Footer = dynamic( ()=> import('./components/Footer') )
+const ThemeBtn = dynamic( ()=> import('./components/ThemeBtn') )
+
 export default function RootLayout({ children }) {
   const router = useRouter();
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        {router.pathname !== "*" && <Header />}
+        <Header />
         <main>{children}</main>
-        {router.pathname !== "*" && <Footer />}
+        <ThemeBtn />
+        <Footer />
       </body>
     </html>
   )
