@@ -1,57 +1,88 @@
-.footer{
+.footer {
+  margin-top: 150px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    border-radius: 12px;
+    background-image: linear-gradient(#121212, #121212),
+    linear-gradient(to right, #5367ff, #e553ff);
+    border: double 1px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 50%;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .links {
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 150px;
-    position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        width: 5%;
-        height: 3px;
-        border-radius: 12px;
-        background-color: colors.$blue_color;
-        top: -30px;
-    }
+    padding: 50px 0;
+    ul {
+      line-height: 2.5;
 
-    .logo{
+      li > a {
+        text-align: center;
+        color: colors.$yellow_color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .social{
+      margin: 5px auto 40px auto;
+    
+      .logo {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        > img{
-            width: 70%;
+    
+        > img {
+          width: 10%;
         }
-
-        > h4{
-            color: colors.$yellow_color !important;
+    
+        > h4 {
+          color: colors.$yellow_color !important;
+          font-size: 32px;
         }
-
-        > small{
-            font-family: 'reqaa';
+    
+        > small {
+          font-family: "reqaa";
+          font-size: 18px;
         }
-    }
+      }
 
-    ul{
-        line-height: 2.5;
-        
-        li > a{
-            text-align: center;
-            color: colors.$yellow_color;
-            &:hover{
-                text-decoration: underline;
+      .icon_contact{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > a{
+            padding: 0px;
+
+            > img{
+                display: block;
+                margin: 0 auto;
+                width: 60%;
             }
         }
-    }
+      }
+  }
 }
 
-.up{
-    display: none;
-    transform: rotate(180deg);
-    width: 3%;
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    cursor: pointer;
+.up {
+  display: none;
+  transform: rotate(180deg);
+  width: 3%;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  cursor: pointer;
 }
