@@ -1,6 +1,6 @@
 .navbar{
     margin: 10px auto;
-    width: 50%;
+    width: 40%;
     padding: 0 25px;
     border-radius: calc(variables.$radius + 20px);
     box-shadow: colors.$shadow;
@@ -17,8 +17,11 @@
         margin: 0 0 0 auto;
         display: block;
     }
-    #top_screen{
+    .middle_logo{
         cursor: pointer;
+        >img{
+            width: 100%;
+        }
     }
 
     .links{

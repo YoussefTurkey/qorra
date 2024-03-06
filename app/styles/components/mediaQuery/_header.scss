@@ -1,50 +1,115 @@
+@media (max-width: 1564px) {
+  .navbar {
+    width: 50%;
+  }
+}
+@media (max-width: 1251px) {
+  .navbar {
+    width: 60%;
+  }
+}
 @media (max-width: 1197px) {
-    .navbar{
-        .links > li > a{
-            font-size: variables.$p_normal_size;
-        }
+  .navbar {
+    width: 50%;
+    .links > li > a {
+      font-size: variables.$p_normal_size;
+    }
+    .middle_logo{
+      > img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 1103px) {
+    .navbar {
+      width: 55%;
     }
 }
 @media (max-width: 1047px) {
-    .navbar{
-        .links > li{
-            padding: 5px 0;
-        }
+  .navbar {
+    .links > li {
+      padding: 5px 0;
     }
+  }
 }
 @media (max-width: 1023px) {
-    .navbar {
-        #top_screen > img{
-            width: 60%;
-        }
+  .navbar {
+    .middle_logo > img {
+      width: 60%;
     }
+
+    #navbarScroll{
+        display: flex;
+        justify-content: center;
+    }
+
+    .small_logo > img{
+        width: 60%;
+    }
+  }
 }
 @media (max-width: 991px) {
-    .navbar {
-        .navbar-brand{
-            display: block;
-            margin: 0 0 auto 0;
-        }
+  .navbar {
+    .navbar-brand {
+      display: block;
+      margin: 0 0 auto 0;
+    }
 
-        .navbar_dark{
-            background-color: colors.$yellow_color;
+    .navbar_dark {
+      background-color: colors.$yellow_color;
+    }
+  }
+}
+@media (max-width: 767px) {
+    // .navbar{
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+  .navbar-brand {
+    > img {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+@media (max-width: 639px) {
+    .nav_flex{
+        display: flex;
+
+        .small_logo > img{
+            width: 50%;
         }
     }
 }
-@media (max-width: 767px) {
-    .navbar-brand{
-        > img{
-            width: 50%;
-            float: left;
+@media (max-width: 432px) {
+    .navbar{
+        width: 90%;
+        .nav_flex{
+            display: flex;
+    
+            .small_logo > img{
+                width: 45%;
+            }
         }
     }
 }
 
 @-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 @keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
