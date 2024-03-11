@@ -1,40 +1,36 @@
-"use client"
-  // Import React Components
-import React, { useRef, Suspense } from "react"
+"use client";
+// Import React Components
+import React, { useRef, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 // Import External Lib
 import useSWR from "swr";
 import axios from "axios";
-import { ThemeProvider } from "next-themes"
-  // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-  // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-  // import required modules
+import { ThemeProvider } from "next-themes";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const DataLoading = dynamic( ()=>import('@/app/components/Error') )
-const Error = dynamic( ()=>import('@/app/components/DataLoading') )
+const DataLoading = dynamic(() => import("@/app/components/DataLoading"));
+const Error = dynamic(() => import("@/app/components/Error"));
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 export default function Home() {
-  
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
-  const { data, error } = useSWR(
-    "/db/data.json",
-    fetcher
-  );
+  const { data, error } = useSWR("/db/data.json", fetcher);
   if (error) return <Error />;
   if (!data) return <DataLoading />;
 
@@ -59,16 +55,40 @@ export default function Home() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <Image src={'/assets/images/photos/img1.png'} width={1739} height={715.52} loading="lazy" alt="khassan kanafy"/>
+            <Image
+              src={"/assets/images/photos/img1.png"}
+              width={1739}
+              height={715.52}
+              loading="lazy"
+              alt="khassan kanafy"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={'/assets/images/photos/img2.png'} width={1739} height={715.52} loading="lazy" alt="mamdouh darwish"/>
+            <Image
+              src={"/assets/images/photos/img2.png"}
+              width={1739}
+              height={715.52}
+              loading="lazy"
+              alt="mamdouh darwish"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={'/assets/images/photos/img3.png'} width={1739} height={715.52} loading="lazy" alt="almanfaloty"/>
+            <Image
+              src={"/assets/images/photos/img3.png"}
+              width={1739}
+              height={715.52}
+              loading="lazy"
+              alt="almanfaloty"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={'/assets/images/photos/img4.png'} width={1739} height={715.52} loading="lazy" alt="alrafay"/>
+            <Image
+              src={"/assets/images/photos/img4.png"}
+              width={1739}
+              height={715.52}
+              loading="lazy"
+              alt="alrafay"
+            />
           </SwiperSlide>
           <div className="autoplay-progress" slot="container-end">
             <svg viewBox="0 0 48 48" ref={progressCircle}>
@@ -78,105 +98,257 @@ export default function Home() {
           </div>
         </Swiper>
 
-        <section className="about">
+        <div className="grid lg:grid-cols-4 lg:gap-4 md:grid-cols-2 md:gap-6 sm:grid-cols-1 sm:gap-4 we_count">
+          <div>
+            <Image
+              src={"/assets/images/participant.svg"}
+              width={150}
+              height={150}
+              loading={"lazy"}
+              alt="متطوعين"
+            />
+            <p className="num">أكثر من مائة وخمسين</p>
+            <p>متطوع</p>
+          </div>
+
+          <div>
+            <Image
+              src={"/assets/images/followers.svg"}
+              width={150}
+              height={150}
+              loading={"lazy"}
+              alt="متابعين"
+            />
+            <p className="num">أكثر من ثمانية الاف</p>
+            <p>متابع</p>
+          </div>
+
+          <div>
+            <Image
+              src={"/assets/images/learning.svg"}
+              width={150}
+              height={150}
+              loading={"lazy"}
+              alt="متعلمين"
+            />
+            <p className="num">أكثر من سبعين</p>
+            <p>متعلم</p>
+          </div>
+
+          <div>
+            <Image
+              src={"/assets/images/projects.svg"}
+              width={150}
+              height={150}
+              loading={"lazy"}
+              alt="مشاريع"
+            />
+            <p className="num">أكثر من ثلاثة</p>
+            <p>مشاريع</p>
+          </div>
+        </div>
+
+        <div className="we_proud">
           <div className="title">
-            <h1>مَن <span>قُرَّاءْ</span></h1>
+          <h2>
+            نعتز <span>بلغتنا</span>
+          </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 lg:gap-6 md:grid-cols-1 md:gap-4">
+            <div>
+              <Image
+                src={"/assets/images/target.png"}
+                width={150}
+                height={150}
+                alt="أهدافنا"
+                loading="lazy"
+              />
+              <h4>أهدافنا</h4>
+              <p>
+                تحقيق التنمية الثقافية واالجتماعية كجزء من التنمية المستدامة.
+              </p>
+              <p>ممارسة اللغة العربية الفصيحة من خالل ورش اللغة.</p>
+              <p>لقاءات مع نماذج مشرفة وإبراز دورهم في المجتمع</p>
+            </div>
+
+            <div>
+              <Image
+                src={"/assets/images/roadmap.png"}
+                width={150}
+                height={150}
+                alt="رؤيتنا"
+                loading="lazy"
+              />
+              <h4>أهدافنا</h4>
+              <p>
+                تحقيق التنمية الثقافية واالجتماعية كجزء من التنمية المستدامة.
+              </p>
+              <p>ممارسة اللغة العربية الفصيحة من خالل ورش اللغة.</p>
+              <p>لقاءات مع نماذج مشرفة وإبراز دورهم في المجتمع</p>
+            </div>
+
+            <div>
+              <Image
+                src={"/assets/images/chat.png"}
+                width={150}
+                height={150}
+                alt="رسالتنا"
+                loading="lazy"
+              />
+              <h4>رسالتنا</h4>
+              <p>
+                تحقيق التنمية الثقافية واالجتماعية كجزء من التنمية المستدامة.
+              </p>
+              <p>ممارسة اللغة العربية الفصيحة من خالل ورش اللغة.</p>
+              <p>لقاءات مع نماذج مشرفة وإبراز دورهم في المجتمع</p>
+            </div>
+
+            <div>
+              <Image
+                src={"/assets/images/diamond.png"}
+                width={150}
+                height={150}
+                alt="قيمنا"
+                loading="lazy"
+              />
+              <h4>قيمنا</h4>
+              <p>
+                تحقيق التنمية الثقافية واالجتماعية كجزء من التنمية المستدامة.
+              </p>
+              <p>ممارسة اللغة العربية الفصيحة من خالل ورش اللغة.</p>
+              <p>لقاءات مع نماذج مشرفة وإبراز دورهم في المجتمع</p>
+            </div>
+          </div>
+        </div>
+
+        {/* <section className="about">
+          <div className="title">
+            <h2>
+              مَن <span>قُرَّاءْ</span>
+            </h2>
           </div>
 
           <div className="info grid lg:grid-cols-2 lg:gap-6 lg:items-center md:grid-cols-1">
             <div className="info_txt">
               <h3>نحن هنا منذ 2020م</h3>
               <p>
-                قراء هي مبادرة مجتمعية تهدف إلى تنمية المجتمع من خلال تقديم التدريبات الأكاديمية والتخصصية
-                  والمهارية لكل لجنة من لجان المبادرة، حيثُ يَأْخُذُ كلُّ شَخْصٍ يَنْضَمُّ حَدِيثًا
-                  للجنةٍ تدريباتٍ أكاديمية وعملية في مجالِ اللجنةِ الخاصةِ به؛
-                  ليكون قادرًا على تأدية مهام اللجنة بثقة وكفاءة وفاعلية.
+                قراء هي مبادرة مجتمعية تهدف إلى تنمية المجتمع من خلال تقديم
+                التدريبات الأكاديمية والتخصصية والمهارية لكل لجنة من لجان
+                المبادرة، حيثُ يَأْخُذُ كلُّ شَخْصٍ يَنْضَمُّ حَدِيثًا للجنةٍ
+                تدريباتٍ أكاديمية وعملية في مجالِ اللجنةِ الخاصةِ به؛ ليكون
+                قادرًا على تأدية مهام اللجنة بثقة وكفاءة وفاعلية.
               </p>
               <p>
-                ولتعزيز المزيد من المهارات والمعرفة، تتولى أجنحة خاصة مهمة التدريب والتعليم وزيادة الثقافة،
-                  مثل جناح صون اللسان العربي الذي يقدم مداخلا للغة العربية تتضمن ورشًا تفاعلية وتدريبات
-                  أكاديمية لتحسين مهارات اللغة العربية بكفاءة عالية وبطريقة ممتعة.
+                ولتعزيز المزيد من المهارات والمعرفة، تتولى أجنحة خاصة مهمة
+                التدريب والتعليم وزيادة الثقافة، مثل جناح صون اللسان العربي الذي
+                يقدم مداخلا للغة العربية تتضمن ورشًا تفاعلية وتدريبات أكاديمية
+                لتحسين مهارات اللغة العربية بكفاءة عالية وبطريقة ممتعة.
               </p>
-              <Link href={'/pages/we'} className='more'>تعرف علينا أكثر</Link>
+              <Link href={"/pages/we"} className="more">
+                تعرف علينا أكثر
+              </Link>
             </div>
-            
+
             <div className="info_img">
-              <Image src={'/assets/images/photos/qorra_screen.jpg'} className="rounded-full" height={450} width={450} alt="قراء" loading="lazy" />
+              <Image
+                src={"/assets/images/photos/qorra_screen.jpg"}
+                className="rounded-full"
+                height={450}
+                width={450}
+                alt="قراء"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
 
         <section className="service">
           <div className="title">
-            <h2>ماذا تقدم <span>قُرَّاءْ</span>؟</h2>
+            <h2>
+              ماذا تقدم <span>قُرَّاءْ</span>؟
+            </h2>
           </div>
 
-          <div className='logo'>
-            <Image src={'/assets/images/qorra.png'} width={200} height={200} loading="lazy" alt="qorra-logo" />
+          <div className="logo">
+            <Image
+              src={"/assets/images/qorra.png"}
+              width={200}
+              height={200}
+              loading="lazy"
+              alt="qorra-logo"
+            />
           </div>
 
           <div className="service_details">
-            <div className='committes'>
-                <h4 className='committe_head'>الأول:
-                  <span>لجان المبادرة</span>
-                </h4>
+            <div className="committes">
+              <h4 className="committe_head">
+                الأول:
+                <span>لجان المبادرة</span>
+              </h4>
 
-                <ul className='committe_data'>
-                  <li>- لجنة التقييم والتطوير</li>
-                  <li>- لجنة الإعلام</li>
-                  <li>- لجنة العلاقات العامة والتنظيم</li>
-                  <li>- إدارة المشروعات</li>
-                </ul>
+              <ul className="committe_data">
+                <li>- لجنة التقييم والتطوير</li>
+                <li>- لجنة الإعلام</li>
+                <li>- لجنة العلاقات العامة والتنظيم</li>
+                <li>- إدارة المشروعات</li>
+              </ul>
             </div>
 
-            <div className='wings' id='sec_info'>
-                <h4 className='wing_head'>الثاني:
-                  <span>أجنحة المبادرة</span>
-                </h4>
+            <div className="wings" id="sec_info">
+              <h4 className="wing_head">
+                الثاني:
+                <span>أجنحة المبادرة</span>
+              </h4>
 
-                <ul className='wing_data'>
-                  <li>- جناح صون اللسان العربي</li>
-                  <li>- جناح صناعة قارئ</li>
-                  <li>- جناح الجريدة</li>
-                  <li>- جناح البحث العلمي</li>
-                  <li>- جناح الخدمة المدنية</li>
-                </ul>
+              <ul className="wing_data">
+                <li>- جناح صون اللسان العربي</li>
+                <li>- جناح صناعة قارئ</li>
+                <li>- جناح الجريدة</li>
+                <li>- جناح البحث العلمي</li>
+                <li>- جناح الخدمة المدنية</li>
+              </ul>
             </div>
           </div>
 
           <div className="service_query">
-            <div className='committes_hide'>
-                <h4 className='committe_head font-bold text-2xl py-[10px]'>الأول:
-                  <span>لجان المبادرة</span>
-                </h4>
+            <div className="committes_hide">
+              <h4 className="committe_head font-bold text-2xl py-[10px]">
+                الأول:
+                <span>لجان المبادرة</span>
+              </h4>
 
-                <ul className='committe_data'>
-                  <li>- لجنة التقييم والتطوير</li>
-                  <li>- لجنة الإعلام</li>
-                  <li>- لجنة العلاقات العامة والتنظيم</li>
-                  <li>- إدارة المشروعات</li>
-                </ul>
+              <ul className="committe_data">
+                <li>- لجنة التقييم والتطوير</li>
+                <li>- لجنة الإعلام</li>
+                <li>- لجنة العلاقات العامة والتنظيم</li>
+                <li>- إدارة المشروعات</li>
+              </ul>
             </div>
 
-            <div className='wings_hide'>
-                <h4 className='wing_head font-bold text-2xl py-[10px]'>الثاني:
-                  <span>أجنحة المبادرة</span>
-                </h4>
+            <div className="wings_hide">
+              <h4 className="wing_head font-bold text-2xl py-[10px]">
+                الثاني:
+                <span>أجنحة المبادرة</span>
+              </h4>
 
-                <ul className='wing_data'>
-                  <li>- جناح صون اللسان العربي</li>
-                  <li>- جناح صناعة قارئ</li>
-                  <li>- جناح الجريدة</li>
-                  <li>- جناح البحث العلمي</li>
-                  <li>- جناح الخدمة المدنية</li>
-                </ul>
+              <ul className="wing_data">
+                <li>- جناح صون اللسان العربي</li>
+                <li>- جناح صناعة قارئ</li>
+                <li>- جناح الجريدة</li>
+                <li>- جناح البحث العلمي</li>
+                <li>- جناح الخدمة المدنية</li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="goals">
           <div className="title">
-            <h2> <span>أهدافنا</span> </h2>
+            <h2>
+              {" "}
+              <span>أهدافنا</span>{" "}
+            </h2>
           </div>
 
           <div className="info">
@@ -190,55 +362,93 @@ export default function Home() {
             <p>العمل على محو الأمية.</p>
             <p>زيادة الوعي بأهم قضايا المجتمع والسعي لإيجاد حلول لها.</p>
           </div>
-        </section>
+        </section> */}
 
         <section className="events">
           <div className="title">
-            <h2>أحدث <span>الفاعليات</span></h2>
+            <h2>
+              أحدث <span>الفاعليات</span>
+            </h2>
           </div>
 
           <div className="cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6">
-            {
-              data.events.map(post => {
-                return(
-                  <div className="card" key={post.id}>
-                    <Image src={post.imgPost} width={400} height={400} loading="lazy" alt="" />
+            {data.events.map((post) => {
+              return (
+                <div className="card" key={post.id}>
+                  <Image
+                    src={post.imgPost}
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    alt=""
+                  />
 
-                    <div className="card_info">
-                      <h3>{post.title}</h3>
-                      <p>{post.subTitle}</p>
-                      <Link href={`/pages/posts/${post.id}`} role="button" className='link'>للمزيد من المعلومات</Link>
-                    </div>
+                  <div className="card_info">
+                    <h3>{post.title}</h3>
+                    <p>{post.subTitle}</p>
+                    <Link
+                      href={`/pages/posts/${post.id}`}
+                      role="button"
+                      className="link"
+                    >
+                      للمزيد من المعلومات
+                    </Link>
                   </div>
-                )
-              })
-            }
+                </div>
+              );
+            })}
           </div>
 
           {/* <Link href={'/'} className="more block mx-auto my-5 w-fit" role="button">للمزيد من المقالات...</Link> */}
         </section>
-        
+
         <section className="partners">
           <div className="title">
-            <h2><span>شركائنا</span></h2>
+            <h2>
+              <span>شركائنا</span>
+            </h2>
           </div>
 
           <div className="flex justify-around items-center mb-10 logos">
             <div>
-              <Image src={'/assets/images/business.png'} width={100} height={100} loading="lazy" alt="كلية تجارة" />
+              <Image
+                src={"/assets/images/business.png"}
+                width={100}
+                height={100}
+                loading="lazy"
+                alt="كلية تجارة"
+              />
             </div>
             <div>
-            <Image src={'/assets/images/mdarj.png'} width={100} height={100} loading="lazy" alt="مدارج" />
+              <Image
+                src={"/assets/images/mdarj.png"}
+                width={100}
+                height={100}
+                loading="lazy"
+                alt="مدارج"
+              />
             </div>
             <div>
-              <Image src={'/assets/images/mezza.png'} width={100} height={100} loading="lazy" alt="ميزة" />
+              <Image
+                src={"/assets/images/mezza.png"}
+                width={100}
+                height={100}
+                loading="lazy"
+                alt="ميزة"
+              />
             </div>
             <div>
-              <Image src={'/assets/images/arabisk.png'} width={100} height={100} loading="lazy" alt="أرابيسك" />
+              <Image
+                src={"/assets/images/arabisk.png"}
+                width={100}
+                height={100}
+                loading="lazy"
+                alt="أرابيسك"
+              />
             </div>
           </div>
         </section>
       </Suspense>
     </ThemeProvider>
-  )
+  );
 }

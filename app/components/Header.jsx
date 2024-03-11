@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur">
-        <div className="max-w-screen-xl mx-auto p-4">
+        <div className="max-w-screen-xl mx-auto">
           <div className="md:flex sm:flex flex-wrap items-center justify-between nav_flex">
             <Link
               href={"/"}

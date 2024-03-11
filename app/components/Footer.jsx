@@ -5,6 +5,18 @@ import React from "react";
 const Footer = () => {
   return (
     <section className="footer">
+      <div className="logo">
+          <Image
+            src={"/assets/images/qorra.png"}
+            width={1000}
+            height={1000}
+            alt="مبادرة قراء"
+            loading="lazy"
+          />
+          <h4>قُرَّاءْ</h4>
+          <small>نهارٌ نحمله في روحِنا لا يُظلمُ ابداً</small>
+        </div>
+      
       <div className="links grid lg:grid-cols-4 lg:gap-4 sm:grid-cols-1">
         <div>
           <h4>مَن نحن</h4>
@@ -69,18 +81,6 @@ const Footer = () => {
       </div>
 
       <div className="social">
-        <div className="logo">
-          <Image
-            src={"/assets/images/qorra.png"}
-            width={1000}
-            height={1000}
-            alt="مبادرة قراء"
-            loading="lazy"
-          />
-          <h4>قُرَّاءْ</h4>
-          <small>نهارٌ نحمله في روحِنا لا يُظلمُ ابداً</small>
-        </div>
-
         <div className="icon_contact">
           <Link target="_blank" href={"https://web.facebook.com/profile.php?id=100064109831938"}>
             <Image
@@ -110,6 +110,7 @@ const Footer = () => {
             />
           </Link>
         </div>
+        <p className="text-center mr-16 py-5">جميع الحقوق محفوظة لمبادرة قُرَّاءْ ©</p>
       </div>
     </section>
   );

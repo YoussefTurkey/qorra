@@ -1,20 +1,45 @@
 .footer {
   margin-top: 150px;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 30%;
-    border-radius: 12px;
-    background-image: linear-gradient(#121212, #121212),
-    linear-gradient(to right, #5367ff, #e553ff);
-    border: double 1px transparent;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    border-radius: 50%;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+  padding: 10px 0;
+  background-color: colors.$black_color;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top: 1px solid colors.$yellow_color;
+  background: radial-gradient(
+      circle at 0 40%,
+      rgba(56, 109, 179, 0.17),
+      hsl(0deg 100% 50% / 0%) 25%
+    ),
+    radial-gradient(
+      circle at 100% 40%,
+      rgba(104, 51, 226, 0.17),
+      hsl(0deg 100% 50% / 0%) 25%
+    ),
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(49, 252, 255, 0.17),
+      hsl(0deg 100% 50% / 0%) 25%
+    );
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 50px 15px 0;
+
+    > img {
+      width: 10%;
+    }
+
+    > h4 {
+      color: colors.$yellow_color !important;
+      font-size: 32px;
+    }
+
+    > small {
+      font-family: "reqaa";
+      font-size: 18px;
+    }
   }
 
   .links {
@@ -36,44 +61,22 @@
     }
   }
 
-  .social{
-      margin: 5px auto 40px auto;
-    
-      .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
+  .social {
+    .icon_contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
+      > a {
+        padding: 0px;
+
         > img {
-          width: 10%;
-        }
-    
-        > h4 {
-          color: colors.$yellow_color !important;
-          font-size: 32px;
-        }
-    
-        > small {
-          font-family: "reqaa";
-          font-size: 18px;
+          display: block;
+          margin: 0 auto;
+          width: 60%;
         }
       }
-
-      .icon_contact{
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        > a{
-            padding: 0px;
-
-            > img{
-                display: block;
-                margin: 0 auto;
-                width: 60%;
-            }
-        }
-      }
+    }
   }
 }
 
