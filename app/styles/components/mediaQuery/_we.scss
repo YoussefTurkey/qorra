@@ -31,6 +31,12 @@
         }
     }
 }
+@media (max-width: 767px) {
+    .we{
+        padding: 0 20px;
+        margin-top: 90px;
+    }
+}
 
 @-webkit-keyframes fly {
     0% { transform: translate(0, 0); }

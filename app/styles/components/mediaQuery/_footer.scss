@@ -4,7 +4,12 @@
 }
 @media (max-width: 767px) {
     .footer {
-        flex-direction: column;
+        .links{
+            flex-direction: column;
+            div{
+                margin: 20px 0;
+            }
+        }
 
         > div:not(:first-child){
             padding: 25px;

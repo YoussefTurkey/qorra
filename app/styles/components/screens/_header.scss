@@ -25,11 +25,16 @@
     }
 
     .links{
-        > li{
+        > li a{
             padding: 0 15px;
             font-size: variables.$h4_size;
             font-weight: bold;
             color: colors.$blue_color;
+            transition: variables.$trans;
+
+            &:hover{
+                color: colors.$yellow_color;  
+            }
 
             .active{
                 position: relative;

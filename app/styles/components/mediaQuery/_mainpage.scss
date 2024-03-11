@@ -1,133 +1,200 @@
-@media (max-width: 767px) {
-    .mySwiper{
-        .swiper-button-prev,
-        .swiper-button-next{
-            display: none;
-        }
-    }
-    .mySwiper .autoplay-progress{
-        width: 24px;
-        height: 24px;
-
-        > span{
-            font-size: 10px;
-        }
-    }
+@media (max-width: 1140px) {
+  .events .card {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1302px) {
-    .service .logo::before{
-        left: 60%;
-        width: 15%;
-    }
-    .service .logo::after{
-        right: 60%;
-        width: 15%;
-    }
-    .service .service_details .committes, .service .service_details .wings{
-        width: 24%;
-    }
+  .service .logo::before {
+    left: 60%;
+    width: 15%;
+  }
+  .service .logo::after {
+    right: 60%;
+    width: 15%;
+  }
+  .service .service_details .committes,
+  .service .service_details .wings {
+    width: 24%;
+  }
 }
 @media (max-width: 1085px) {
-    .service .logo::before {
-        left: 62%;
-        width: 10%;
-    }
-    .service .logo::after{
-        right: 62%;
-        width: 10%;
-    }
-    .service .service_details .committes, .service .service_details .wings {
-        width: 27%;
-    }
-}
-@media (max-width: 964px) {
-    .service{
-        .service_details,
-        .logo{
-            display: none;
-        }
-    
-        .service_query{
-            display: block;
-    
-            .committes_hide,
-            .wings_hide{
-                background: linear-gradient(270deg, transparent 0%, rgba(254,206,47,1) 35%);
-                margin: 25px 0;
-                padding: 15px 15px 1px 0;
-                border-bottom-left-radius: 50px;
-    
-                ul{
-                    padding-right: 25px;
-                }
-            }
-        }
-    }
+  .service .logo::before {
+    left: 62%;
+    width: 10%;
+  }
+  .service .logo::after {
+    right: 62%;
+    width: 10%;
+  }
+  .service .service_details .committes,
+  .service .service_details .wings {
+    width: 27%;
+  }
 }
 
 @media (max-width: 1023px) {
-    .info_img{
-        display: none;
+  .info_img {
+    display: none;
+  }
+}
+
+@media (max-width: 964px) {
+  .service {
+    .service_details,
+    .logo {
+      display: none;
     }
+
+    .service_query {
+      display: block;
+
+      .committes_hide,
+      .wings_hide {
+        background: linear-gradient(
+          270deg,
+          transparent 0%,
+          rgba(254, 206, 47, 1) 35%
+        );
+        margin: 25px 0;
+        padding: 15px 15px 1px 0;
+        border-bottom-left-radius: 50px;
+
+        ul {
+          padding-right: 25px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
-    .title{
-        h1, h2{
-            font-size: 50px !important;
+  .mySwiper {
+    width: 100%;
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  .mySwiper .autoplay-progress {
+    width: 24px;
+    height: 24px;
+
+    > span {
+      font-size: 10px;
+    }
+  }
+
+  .we_count {
+    margin: 100px 0;
+    div{
+      margin: 30px 0;
+      .num, p{
+        font-size: 30px !important;
+      }
+    }
+  }
+
+  .title {
+    h1,
+    h2 {
+      font-size: 50px !important;
+    }
+  }
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  .more {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  .cards {
+    .card {
+      margin-bottom: 25px;
+    }
+  }
+
+  .events{
+    padding: 0 35px;
+  }
+
+  .partners {
+    .logos {
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > img {
+          width: 40%;
         }
+      }
     }
+  }
 
-    h3{
-        font-size: 24px !important;
-    }
+  .we_proud{
+    .proud_cards{
+        img{
+            width: 30%;
+            order: 1;
+        }   
+        .proud_card{
+          flex-direction: column;
 
-    p{
-        font-size: 14px !important;
-    }
-
-    .more{
-        margin: 0 auto;
-        display: block;
-        text-align: center;
-    }
-
-    .cards{
-        .card{
-            margin-bottom: 25px;
-        }
-    }
-
-    .partners{
-        .logos{
-            > div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                > img{
-                    width: 40%;
-                }
+          .proud_txt{
+            order: 2;
+            text-align: center;
+            p{
+                font-size: 25px !important;
             }
+          }
         }
     }
+  }
 }
 
 @-webkit-keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0px);}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0px);}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 @-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 @keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

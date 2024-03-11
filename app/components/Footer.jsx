@@ -110,7 +110,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <p className="text-center mr-16 py-5">جميع الحقوق محفوظة لمبادرة قُرَّاءْ ©</p>
+        <p className="text-center py-5">جميع الحقوق محفوظة لمبادرة قُرَّاءْ ©</p>
       </div>
     </section>
   );
