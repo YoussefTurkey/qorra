@@ -3,17 +3,6 @@
     padding: 0 100px;
 
     .lead_title{
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 0px;
-            width: 7%;
-            height: 4px;
-            background-color: colors.$yellow_color;
-        }
-
         h2 {
             font-size: 40px;
             margin: 50px 0;
@@ -24,20 +13,6 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 60px;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    height: 100%;
-                    width: 30%;
-                    text-align: center;
-                    background: url('/assets/images/line.svg') center/contain no-repeat;
-                    transform: translateX(-50%) rotate(0);
-                    -webkit-transform: translateX(-50%) rotate(0);
-                    z-index: -1;
-                }
             }
         }
     }

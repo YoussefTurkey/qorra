@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Header = () => {
@@ -93,22 +92,22 @@ const Header = () => {
           {toggleNavbar && (
             <div className="lg:hidden md:block md:w-auto" id="navbarScroll">
               <ul className="links flex flex-col text-center">
-                <li>
+                <li onClick={() => setToggleNavbar(!toggleNavbar)}>
                   <Link href={"/"} className="active" aria-current="page">
                     الرئيسية
                   </Link>
                 </li>
-                <li>
+                <li onClick={() => setToggleNavbar(!toggleNavbar)}>
                   <Link href={"/pages/we"} className="">
                     من نحن
                   </Link>
                 </li>
-                <li>
+                <li onClick={() => setToggleNavbar(!toggleNavbar)}>
                   <Link href={"/pages/volunteers"} className="">
                     المتطوعون
                   </Link>
                 </li>
-                <li>
+                <li onClick={() => setToggleNavbar(!toggleNavbar)}>
                   <Link href={"/pages/contact"} className="">
                     راسلنا
                   </Link>

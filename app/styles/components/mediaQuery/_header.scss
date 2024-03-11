@@ -37,6 +37,8 @@
 }
 @media (max-width: 1023px) {
   .navbar {
+    padding: 15px 20px;
+    
     .middle_logo > img {
       width: 60%;
     }
@@ -48,6 +50,17 @@
 
     .small_logo > img{
         width: 60%;
+    }
+
+    .links {
+      width: 100%;
+
+      li{
+        padding: 10px 0;
+        > a{
+          font-size: 20px;
+        }
+      }
     }
   }
 }

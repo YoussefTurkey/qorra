@@ -33,7 +33,7 @@ const Volunteers = () => {
                 </h2>
             </div>
 
-            <div className='team_lead grid lg:grid-cols-2 lg:gap-2 md:grid-col-2 md:gap-6 sm:grid-cols-1 sm:gap-4 sm:items-center lg:w-[50%] md:w-[50%]'>
+            <div className='team_lead grid lg:grid-cols-2 lg:gap-2 md:grid-col-2 md:gap-6 sm:grid-cols-1 sm:gap-4 sm:items-center lg:w-[50%]'>
                 {
                     data.presedent.map(leader => {
                         return(

@@ -1,10 +1,26 @@
 @media (max-width: 991px) {
     .leaders {
-        .team_lead >{
+        .lead_title{
+            text-align: center;
+        }
+        .team_lead {
             justify-content: center;
     
             > a {
                 width: 100%;
+                text-align: center;
+
+                img{
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                h5{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 18px;
+                }
             }
         } 
     }
