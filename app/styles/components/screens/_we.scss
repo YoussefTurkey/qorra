@@ -11,24 +11,9 @@
     }
   }
 
-  .we_desc {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -20%;
-      left: 5%;
-      background: url("/assets/images/rocket.svg") 0 0/100% 100% no-repeat;
-      text-align: center;
-      height: 70px;
-      width: 70px;
-      z-index: -1;
-      animation: 1s ease-in-out infinite fly;
-    }
-
-    p {
-      line-height: 2.5;
-      padding: 10px 0;
+  .video {
+    iframe{
+      margin: 0 auto;
     }
   }
 
@@ -49,6 +34,16 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
+      }
+    }
+
+    .info_txt{
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      
+      > p{
+        line-height: 2;
       }
     }
 
@@ -226,11 +221,11 @@
 
     .info {
       width: 80%;
-      margin: auto;
+      margin: 0 auto;
 
       p {
         font-size: 20px;
-        line-height: 2;
+        line-height: 4;
         padding-right: 50px;
         position: relative;
         &::before {
@@ -240,6 +235,7 @@
           background: url("/assets/images/star.svg") no-repeat;
           height: 40px;
           width: 40px;
+          transform: translateY(50%);
         }
       }
     }

@@ -8,7 +8,14 @@
     
             > a {
                 width: 100%;
+                margin: 5% auto;
                 text-align: center;
+                &:hover{
+                    h5::after{
+                        content: '';
+                        display: none;
+                    }
+                }
 
                 img{
                     display: block;
@@ -35,8 +42,9 @@
             align-items: flex-start !important;
     
             > img{
-                width: 40% !important;
+                width: 50% !important;
                 border-radius: 12px !important;
+                margin: 10% auto;
             }
     
             > .profile_info{
@@ -54,5 +62,12 @@
     .leaders {
         margin: 100px auto;
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .profile {
+        padding: 0 50px;
+        text-align: center;
     }
 }

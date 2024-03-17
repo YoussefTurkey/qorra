@@ -37,7 +37,7 @@ const Volunteers = () => {
                 {
                     data.presedent.map(leader => {
                         return(
-                            <Link href={`/pages/profile/presedents/${leader.id}`} key={leader.id}>
+                            <Link href={`/profile/presedents/${leader.id}`} key={leader.id}>
                                 <Image src={leader.image} width={800} height={800} alt={leader.name} loading='lazy' />
                                 <h5>{leader.name}</h5>
                                 <p>{leader.title}</p>
@@ -59,7 +59,7 @@ const Volunteers = () => {
                 {
                     data.commetties.map(leader => {
                         return(
-                            <Link href={`/pages/profile/commetties/${leader.id}`} key={leader.id}>
+                            <Link href={`/profile/commetties/${leader.id}`} key={leader.id}>
                                 <Image src={leader.image} width={800} height={800} alt={leader.name} loading='lazy' />
                                 <h5>{leader.name}</h5>
                                 <p>{leader.title}</p>
@@ -79,7 +79,7 @@ const Volunteers = () => {
                 {
                     data.wings.map(leader => {
                         return(
-                            <Link href={`/pages/profile/wings/${leader.id}`} key={leader.id}>
+                            <Link href={`/profile/wings/${leader.id}`} key={leader.id}>
                                 <Image src={leader.image} width={800} height={800} alt={leader.name} loading='lazy' />
                                 <h5>{leader.name}</h5>
                                 <p>{leader.title}</p>

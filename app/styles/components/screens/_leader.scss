@@ -1,6 +1,7 @@
 .leaders{
     margin: 150px auto;
     padding: 0 100px;
+    text-align: center;
 
     .lead_title{
         h2 {
@@ -18,11 +19,13 @@
     }
 
     .team_lead{
+        margin: 0 auto;
+
         a{
-            margin: 30px 0;
+            width: 70%;
+            margin: 0 auto;
             color: colors.$black_color;
             cursor: pointer;
-            width: 100%;
 
             &:hover{
                 img{
@@ -36,12 +39,12 @@
                     height: 3px;
                     position: absolute;
                     bottom: 0px;
-                    right: 0;
+                    right: 50%;
+                    transform: translateX(50%);
                 }
             }
 
             img{
-                width: 75%;
                 border-radius: 12px;
                 box-shadow: colors.$shadow;
                 transition: variables.$trans;
@@ -61,16 +64,6 @@
 .profile{
     margin-top: 170px;
     padding: 0 100px;
-    position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: 92%;
-            right: 102px;
-            width: 10%;
-            height: 4px;
-            background-color: colors.$yellow_color;
-        }
 
         h1 {
             font-size: 40px;

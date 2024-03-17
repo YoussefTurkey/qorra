@@ -5,7 +5,7 @@
 }
 @layer base{
     body {
-        @apply bg-[#fff] dark:bg-[#222] dark:text-white
+        @apply bg-[#333] 
     }
     h1,h2, h3, h4, h5, h6 {
         @apply dark:text-white text-[#36261f]
@@ -19,7 +19,7 @@ html{
 }
 body{
     font-family: 'arabic-font', sans-serif;
-    background: radial-gradient(circle at 0 40%,rgba(56,109,179,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 100% 40%,rgba(104,51,226,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 50% 10%,rgba(49,252,255,.17),hsl(0deg 100% 50% / 0%) 25%);
+    background: radial-gradient(circle at 0 40%,rgba(56,109,179,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 100% 40%,rgba(104,51,226,.17),hsl(0deg 100% 50% / 0%) 25%),radial-gradient(circle at 50% 10%,rgba(49,252,255,.17),hsl(0deg 100% 50% / 0%) 25%) !important;
     direction: rtl;
     position: relative;
     overflow-x: hidden;
@@ -146,7 +146,7 @@ main{
 
 // Preloading
 #preload{
-    background: #fff url(../../../public/assets/images/Ripple-1s-200px.gif) no-repeat center center;
+    background: #333 url(../../../public/assets/images/Ripple-1s-200px.gif) no-repeat center center;
     background-size: 10%;
     height: 100vh;
     width: 100%;

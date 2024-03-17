@@ -58,7 +58,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href={"/pages/we"} className="">
+                <Link href={"/we"} className="">
                   من نحن
                 </Link>
               </li>
@@ -77,12 +77,12 @@ const Header = () => {
 
             <ul className="links flex items-center">
               <li>
-                <Link href={"/pages/volunteers"} className="">
+                <Link href={"/volunteers"} className="">
                   المتطوعون
                 </Link>
               </li>
               <li>
-                <Link href={"/pages/contact"} className="">
+                <Link href={"/contact"} className="">
                   راسلنا
                 </Link>
               </li>
@@ -98,17 +98,17 @@ const Header = () => {
                   </Link>
                 </li>
                 <li onClick={() => setToggleNavbar(!toggleNavbar)}>
-                  <Link href={"/pages/we"} className="">
+                  <Link href={"/we"} className="">
                     من نحن
                   </Link>
                 </li>
                 <li onClick={() => setToggleNavbar(!toggleNavbar)}>
-                  <Link href={"/pages/volunteers"} className="">
+                  <Link href={"/volunteers"} className="">
                     المتطوعون
                   </Link>
                 </li>
                 <li onClick={() => setToggleNavbar(!toggleNavbar)}>
-                  <Link href={"/pages/contact"} className="">
+                  <Link href={"/contact"} className="">
                     راسلنا
                   </Link>
                 </li>

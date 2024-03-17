@@ -22,10 +22,10 @@ const Footer = () => {
           <h4>مَن نحن</h4>
           <ul>
             <li>
-              <Link href={"/pages/we"}>الرؤية والرسالة والأهداف</Link>
+              <Link href={"/we"}>الرؤية والرسالة والأهداف</Link>
             </li>
             <li>
-              <Link href={"/pages/volunteers"}>أعضاء الإدارة التنفيذية</Link>
+              <Link href={"/volunteers"}>أعضاء الإدارة التنفيذية</Link>
             </li>
             <li>
               <Link
@@ -45,7 +45,7 @@ const Footer = () => {
               <Link href={"/"}>الأخبار</Link>
             </li>
             <li>
-              <Link href={"/pages/we"}>الصور</Link>
+              <Link href={"/we"}>الصور</Link>
             </li>
             <li>
               <Link

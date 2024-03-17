@@ -25,10 +25,10 @@ const Profile = ({ params }) => {
     if (error) return <Error />;
     if (!data) return <DataLoading />;
 
-    const leader = data.wings[slug-1]
+    const leader = data.presedent[slug-1]
 
   return (
-    <section>
+    <section className="sm:text-center">
       <div className='profile' key={leader.id}>
         <h1 className='profile_name'>{leader.firstName} <span>{leader.lastName}</span></h1>
         <h2 className="text-2xl">{leader.title}</h2>

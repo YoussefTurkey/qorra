@@ -257,7 +257,7 @@ export default function Home() {
                     <h3>{post.title}</h3>
                     <p>{post.subTitle}</p>
                     <Link
-                      href={`/pages/posts/${post.id}`}
+                      href={`/posts/${post.id}`}
                       role="button"
                       className="link"
                     >
