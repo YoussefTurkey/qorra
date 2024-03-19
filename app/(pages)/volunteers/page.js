@@ -22,8 +22,6 @@ const Volunteers = () => {
     if (error) return <Error />;
     if (!data) return <DataLoading />;
 
-    // console.log(data.Leaders[0].presedent)
-
   return (
     <section className='leaders'>
         <div>
