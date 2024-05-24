@@ -1,3 +1,7 @@
 .contact{
     margin: 10% 30%;
+    
+    input, textarea {
+        color: colors.$white_color;
+    }
 }
