@@ -1,9 +1,14 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .contact{
-        margin-top: 20%;
+        margin: 20% 10%;
 
         .more{
             width: 100%;
         }
+    }
+}
+@media screen and (max-width: 425px) {
+    .contact{
+        margin-top: 40%;
     }
 }

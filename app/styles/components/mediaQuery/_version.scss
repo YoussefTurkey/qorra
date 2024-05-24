@@ -1,0 +1,11 @@
+@media screen and (max-width: 425px) {
+    .version{
+        top: auto;
+        bottom: 0;
+        left: 0;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 0;
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+}

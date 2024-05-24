@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 
 const Header = dynamic( ()=> import('./components/Header') )
 const Footer = dynamic( ()=> import('./components/Footer') )
+const Version = dynamic( ()=> import('./components/Version') )
 const ThemeBtn = dynamic( ()=> import('./components/ThemeBtn') )
 
 export default function RootLayout({ children }) {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
+      <Version />
         <Header />
         <main>{children}</main>
         {/* <ThemeBtn /> */}
